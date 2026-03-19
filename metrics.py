@@ -39,7 +39,7 @@ def calculate_metrics(tx_idx, rx_idx, pos):
 #we use a greedy approach to pair closest nodes
 available_nodes = list(range(nodes))
 pairs = []
-
+"""
 while len(available_nodes) >= 2:
     best_dist = np.inf
     best_pair = (None, None)
@@ -56,3 +56,4 @@ while len(available_nodes) >= 2:
     pairs.append(best_pair)
     available_nodes.remove(best_pair[0])
     available_nodes.remove(best_pair[1])
+"""
