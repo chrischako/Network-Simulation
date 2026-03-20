@@ -26,7 +26,8 @@ def pos(area):
     while nd % 2 != 0:
         print("Number of nodes must be even. Please enter an even number.")
         nd = int(input("Enter the number of nodes: "))
-
+    
+    # setting positios of nodes
     node_positions = []
     for i in range(nd):
         x = np.random.uniform(0, ar)
@@ -85,6 +86,7 @@ def r_data(node_positions):
     for (i, j), dist in closest_pairs:
         sinr, capacity, dist = calculate_metrics(i, j, node_positions)
         print(f"Closest Pair ({i}, {j}): SINR = {sinr:.2f}, Capacity = {capacity:.2f} bps, Distance = {dist:.2f} m")
+
 
 if __name__ == "__main__":
     ar, nd, node_positions = pos(area)
