@@ -35,11 +35,12 @@ def calculate_metrics(tx_idx, rx_idx, pos):
     
     return sinr_linear, capacity, dist_sig
 
+"""
 #maybe i should find the pairs and then calculate the metrics
 #we use a greedy approach to pair closest nodes
 available_nodes = list(range(nodes))
 pairs = []
-"""
+
 while len(available_nodes) >= 2:
     best_dist = np.inf
     best_pair = (None, None)
