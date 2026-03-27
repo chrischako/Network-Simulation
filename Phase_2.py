@@ -2,8 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 #from metrics import fspl_db, calculate_metrics
 
-nodes = 20 # Must be even
-area = 100.0
 C = 3e8 
 FREQ = 2.4e9 #Frequency 
 BW = 20e6 #Bandwidth
@@ -12,9 +10,8 @@ NOISE_DBM = -90  #Noise power in dBm
 
 # setting seed
 np.random.seed(42)
-area = np.zeros((100, 100))
 
-def pos(area):
+def pos():
     # setting area
     ar = float(input("Enter the size of the area: "))
     while ar <= 0:
@@ -27,17 +24,11 @@ def pos(area):
         print("Number of nodes must be even. Please enter an even number.")
         nd = int(input("Enter the number of nodes: "))
     
-    # setting positios of nodes
+    # setting positions of nodes
     node_positions = []
     for i in range(nd):
         x = np.random.uniform(0, ar)
         y = np.random.uniform(0, ar)
-        xi, yi = int(x), int(y)
-        if xi >= area.shape[0]:
-            xi = area.shape[0] - 1
-        if yi >= area.shape[1]:
-            yi = area.shape[1] - 1
-        area[xi][yi] = 1  # marking the position of the node
         node_positions.append((x, y))
         print(f"Node {i+1} placed at: ({x:.2f}, {y:.2f})")
     return ar, nd, node_positions
@@ -69,25 +60,51 @@ def calculate_metrics(tx_idx, rx_idx, pos):
     return sinr_linear, capacity, dist_sig
 
 def r_data(node_positions):
-    # Find all unique pairs and their distances
+    # Greedy pairing: pair closest available nodes
+    available_nodes = list(range(len(node_positions)))
     pairs = []
-    for i in range(len(node_positions)):
-        for j in range(i + 1, len(node_positions)):
-            dist = np.linalg.norm(np.array(node_positions[i]) - np.array(node_positions[j]))
-            pairs.append(((i, j), dist))
-
-    # Sort pairs by distance (ascending)
-    pairs.sort(key=lambda x: x[1])
-
-    # Number of pairs is half the number of nodes
-    num_pairs = len(node_positions) // 2
-    closest_pairs = pairs[:num_pairs]
-
-    for (i, j), dist in closest_pairs:
-        sinr, capacity, dist = calculate_metrics(i, j, node_positions)
-        print(f"Closest Pair ({i}, {j}): SINR = {sinr:.2f}, Capacity = {capacity:.2f} bps, Distance = {dist:.2f} m")
+    
+    while len(available_nodes) >= 2:
+        best_dist = np.inf
+        best_pair = None
+        for i in range(len(available_nodes)):
+            for j in range(i + 1, len(available_nodes)):
+                dist = np.linalg.norm(np.array(node_positions[available_nodes[i]]) - np.array(node_positions[available_nodes[j]]))
+                if dist < best_dist:
+                    best_dist = dist
+                    best_pair = (available_nodes[i], available_nodes[j])
+        if best_pair:
+            pairs.append(best_pair)
+            available_nodes.remove(best_pair[0])
+            available_nodes.remove(best_pair[1])
+    
+    # Calculate metrics for each pair
+    for tx_idx, rx_idx in pairs:
+        sinr, capacity, dist = calculate_metrics(tx_idx, rx_idx, node_positions)
+        print(f"Pair ({tx_idx}, {rx_idx}): SINR = {sinr:.2f}, Capacity = {capacity:.2f} bps, Distance = {dist:.2f} m")
+    
+    return pairs
 
 
 if __name__ == "__main__":
-    ar, nd, node_positions = pos(area)
-    r_data(node_positions)
+    ar, nd, node_positions = pos()
+    pairs = r_data(node_positions)
+    
+    # Plot the nodes and pairs
+    plt.figure(figsize=(8, 8))
+    x_coords = [pos[0] for pos in node_positions]
+    y_coords = [pos[1] for pos in node_positions]
+    plt.scatter(x_coords, y_coords, c='blue', label='Nodes')
+    
+    for tx_idx, rx_idx in pairs:
+        plt.plot([node_positions[tx_idx][0], node_positions[rx_idx][0]], 
+                 [node_positions[tx_idx][1], node_positions[rx_idx][1]], 'r-')
+    
+    plt.xlim(0, ar)
+    plt.ylim(0, ar)
+    plt.xlabel('X position')
+    plt.ylabel('Y position')
+    plt.title('Node Positions and Pairs')
+    plt.legend()
+    plt.grid(True)
+    plt.show()
