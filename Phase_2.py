@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import random as rnd
 #from metrics import fspl_db, calculate_metrics
 
 C = 3e8 
@@ -12,19 +13,14 @@ NOISE_DBM = -90  #Noise power in dBm
 np.random.seed(42)
 
 def pos():
-    # setting area
-    ar = float(input("Enter the size of the area: "))
-    while ar <= 0:
-        print("Area must be positive. Please enter a valid area.")
-        ar = float(input("Enter the size of the area: "))
+    #setting area
+    ar = 100 #rea of 100m x 100m
 
     # setting nodes
-    nd = int(input("Enter the number of nodes: "))
-    while nd % 2 != 0:
-        print("Number of nodes must be even. Please enter an even number.")
-        nd = int(input("Enter the number of nodes: "))
+    nd = 20  #number of nodes
     
-    # setting positions of nodes
+    # setting positions of nodes randomly in the area
+    positions = np.random.rand(nd, 2) * ar #putting nodes in radom pos
     node_positions = []
     for i in range(nd):
         x = np.random.uniform(0, ar)
