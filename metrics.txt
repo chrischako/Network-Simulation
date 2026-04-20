@@ -1,0 +1,10 @@
+SINR: 22.26, Capacity: 90800847.45 bps, Distance: 1.52 m
+SINR: 2.41, Capacity: 35364723.84 bps, Distance: 5.08 m
+SINR: 1.81, Capacity: 29857919.60 bps, Distance: 7.40 m
+SINR: 1.54, Capacity: 26899500.62 bps, Distance: 12.57 m
+SINR: 0.47, Capacity: 11128777.46 bps, Distance: 14.16 m
+SINR: 0.12, Capacity: 3350592.01 bps, Distance: 15.97 m
+SINR: 0.30, Capacity: 7516116.83 bps, Distance: 20.49 m
+SINR: 0.14, Capacity: 3718431.54 bps, Distance: 24.83 m
+SINR: 0.04, Capacity: 1245074.69 bps, Distance: 32.04 m
+SINR: 0.03, Capacity: 718820.20 bps, Distance: 83.63 m

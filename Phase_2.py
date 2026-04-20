@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import random as rnd
-#from metrics import fspl_db, calculate_metrics
 
 C = 3e8 
 FREQ = 2.4e9 #Frequency 
@@ -81,7 +80,7 @@ def r_data(node_positions):
     
     return pairs
 
-#add a function that saves the node positions, pars, and metrics both in npy and txt formats
+# maybe i need to save the data in only one file, but for now i will save in three different files
 def save_data(node_positions, pairs, metrics):
     np.save('node_positions.npy', node_positions)
     np.save('pairs.npy', pairs)
@@ -104,6 +103,7 @@ for i in range (50):
     if __name__ == "__main__":
         ar, nd, node_positions = pos()
         pairs = r_data(node_positions)
+        save_data(node_positions, pairs, [calculate_metrics(tx_idx, rx_idx, node_positions) for tx_idx, rx_idx in pairs])
         
         # Plot the nodes and pairs
         plt.figure(figsize=(8, 8))
