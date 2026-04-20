@@ -81,26 +81,45 @@ def r_data(node_positions):
     
     return pairs
 
+#add a function that saves the node positions, pars, and metrics both in npy and txt formats
+def save_data(node_positions, pairs, metrics):
+    np.save('node_positions.npy', node_positions)
+    np.save('pairs.npy', pairs)
+    np.save('metrics.npy', metrics)
+    
+    with open('node_positions.txt', 'w') as f:
+        for pos in node_positions:
+            f.write(f"{pos[0]:.2f}, {pos[1]:.2f}\n")
+    
+    with open('pairs.txt', 'w') as f:
+        for pair in pairs:
+            f.write(f"{pair[0]}, {pair[1]}\n")
+    
+    with open('metrics.txt', 'w') as f:
+        for metric in metrics:
+            f.write(f"SINR: {metric[0]:.2f}, Capacity: {metric[1]:.2f} bps, Distance: {metric[2]:.2f} m\n")
 
-if __name__ == "__main__":
-    ar, nd, node_positions = pos()
-    pairs = r_data(node_positions)
-    
-    # Plot the nodes and pairs
-    plt.figure(figsize=(8, 8))
-    x_coords = [pos[0] for pos in node_positions]
-    y_coords = [pos[1] for pos in node_positions]
-    plt.scatter(x_coords, y_coords, c='blue', label='Nodes')
-    
-    for tx_idx, rx_idx in pairs:
-        plt.plot([node_positions[tx_idx][0], node_positions[rx_idx][0]], 
-                 [node_positions[tx_idx][1], node_positions[rx_idx][1]], 'r-')
-    
-    plt.xlim(0, ar)
-    plt.ylim(0, ar)
-    plt.xlabel('X position')
-    plt.ylabel('Y position')
-    plt.title('Node Positions and Pairs')
-    plt.legend()
-    plt.grid(True)
-    plt.show()
+
+for i in range (50):        
+    if __name__ == "__main__":
+        ar, nd, node_positions = pos()
+        pairs = r_data(node_positions)
+        
+        # Plot the nodes and pairs
+        plt.figure(figsize=(8, 8))
+        x_coords = [pos[0] for pos in node_positions]
+        y_coords = [pos[1] for pos in node_positions]
+        plt.scatter(x_coords, y_coords, c='blue', label='Nodes')
+        
+        for tx_idx, rx_idx in pairs:
+            plt.plot([node_positions[tx_idx][0], node_positions[rx_idx][0]], 
+                    [node_positions[tx_idx][1], node_positions[rx_idx][1]], 'r-')
+        
+        plt.xlim(0, ar)
+        plt.ylim(0, ar)
+        plt.xlabel('X position')
+        plt.ylabel('Y position')
+        plt.title('Node Positions and Pairs')
+        plt.legend()
+        plt.grid(True)
+        plt.show()
