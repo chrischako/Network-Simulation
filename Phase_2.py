@@ -9,9 +9,9 @@ P_TX_DBM = 20 #Power of the incoming signal
 NOISE_DBM = -90  #Noise power in dBm
 ar = 100 #rea of 100m x 100m
 nd = 20  #number of nodes
-# setting seed
 np.random.seed(42)
 
+#setting positions of nodes randomly in the area
 def pos():
     #setting area
     ar = 100 #rea of 100m x 100m
@@ -29,10 +29,12 @@ def pos():
         print(f"Node {i+1} placed at: ({x:.2f}, {y:.2f})")
     return ar, nd, node_positions
 
+# Free space path loss in dB
 def fspl_db(distance_m, frequency_hz):
     if distance_m <= 0.1: return 0
     return 20 * np.log10(distance_m) + 20 * np.log10(frequency_hz) + 20 * np.log10(4 * np.pi / C)
 
+# Calculate SINR, capacity, and distance for a given pair of nodes
 def calculate_metrics(tx_idx, rx_idx, pos):
     #Signal
     dist_sig = np.linalg.norm(np.array(pos[tx_idx]) - np.array(pos[rx_idx])) #distance
@@ -49,12 +51,12 @@ def calculate_metrics(tx_idx, rx_idx, pos):
             interference_watts += p_int_watts
 
     noise_watts = 10**((NOISE_DBM - 30) / 10) #noise converts from wats to mwats
-    
     sinr_linear = p_sig_watts / (interference_watts + noise_watts) #sinr
     capacity = BW * np.log2(1 + sinr_linear) #shannon_capacity
     
     return sinr_linear, capacity, dist_sig
 
+# Greedy pairing: pair closest available nodes. This will have to change, The user will have to choose the pairs, but for now i will just pair the closest nodes. I will also calculate the metrics for each pair and print them out.
 def r_data(node_positions):
     # Greedy pairing: pair closest available nodes
     available_nodes = list(range(len(node_positions)))
@@ -98,30 +100,3 @@ def save_data(node_positions, pairs, metrics):
     with open('metrics.txt', 'w') as f:
         for metric in metrics:
             f.write(f"SINR: {metric[0]:.2f}, Capacity: {metric[1]:.2f} bps, Distance: {metric[2]:.2f} m\n")
-
-'''
-for i in range (50):        
-    if __name__ == "__main__":
-        ar, nd, node_positions = pos()
-        pairs = r_data(node_positions)
-        save_data(node_positions, pairs, [calculate_metrics(tx_idx, rx_idx, node_positions) for tx_idx, rx_idx in pairs])
-        
-        # Plot the nodes and pairs
-        plt.figure(figsize=(8, 8))
-        x_coords = [pos[0] for pos in node_positions]
-        y_coords = [pos[1] for pos in node_positions]
-        plt.scatter(x_coords, y_coords, c='blue', label='Nodes')
-        
-        for tx_idx, rx_idx in pairs:
-            plt.plot([node_positions[tx_idx][0], node_positions[rx_idx][0]], 
-                    [node_positions[tx_idx][1], node_positions[rx_idx][1]], 'r-')
-        
-        plt.xlim(0, ar)
-        plt.ylim(0, ar)
-        plt.xlabel('X position')
-        plt.ylabel('Y position')
-        plt.title('Node Positions and Pairs')
-        plt.legend()
-        plt.grid(True)
-        plt.show()
-'''
