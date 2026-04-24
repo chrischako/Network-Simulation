@@ -7,7 +7,8 @@ FREQ = 2.4e9 #Frequency
 BW = 20e6 #Bandwidth
 P_TX_DBM = 20 #Power of the incoming signal
 NOISE_DBM = -90  #Noise power in dBm
-
+ar = 100 #rea of 100m x 100m
+nd = 20  #number of nodes
 # setting seed
 np.random.seed(42)
 
@@ -98,7 +99,7 @@ def save_data(node_positions, pairs, metrics):
         for metric in metrics:
             f.write(f"SINR: {metric[0]:.2f}, Capacity: {metric[1]:.2f} bps, Distance: {metric[2]:.2f} m\n")
 
-
+'''
 for i in range (50):        
     if __name__ == "__main__":
         ar, nd, node_positions = pos()
@@ -123,3 +124,4 @@ for i in range (50):
         plt.legend()
         plt.grid(True)
         plt.show()
+'''
