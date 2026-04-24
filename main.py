@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import random as rnd
 from Phase_2 import ar, nd, BW, P_TX_DBM, NOISE_DBM, pos
 from Phase_2 import pos, r_data, save_data, calculate_metrics
+from pos import pos, r_data
 
 for i in range (50):        
     if __name__ == "__main__":
