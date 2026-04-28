@@ -57,7 +57,7 @@ def calculate_metrics(tx_idx, rx_idx, pos):
     return sinr_linear, capacity, dist_sig
 
 # Greedy pairing: pair closest available nodes. This will have to change, The user will have to choose the pairs, but for now i will just pair the closest nodes. I will also calculate the metrics for each pair and print them out.
-def r_data(node_positions):
+def r_data(node_positions): #add a specification for who talks with who and the name of the file which will save the data, also save the data in the correct format (one line)
     # Greedy pairing: pair closest available nodes
     available_nodes = list(range(len(node_positions)))
     pairs = []

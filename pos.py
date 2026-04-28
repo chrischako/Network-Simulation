@@ -24,7 +24,7 @@ def pos():
     return ar, nd, node_positions
 
 
-# Greedy pairing: pair closest available nodes. This will have to change, The user will have to choose the pairs, but for now i will just pair the closest nodes. I will also calculate the metrics for each pair and print them out.
+# Greedy pairing: pair closest available nodes. This will have to change. 
 def r_data(node_positions):
     # Greedy pairing: pair closest available nodes
     available_nodes = list(range(len(node_positions)))
