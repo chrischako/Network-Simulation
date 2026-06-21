@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import random as rnd
 from math import log10
-from Phase_2 import pos, fspl_db, calculate_metrics
+from metrics import pos, fspl_db, calculate_metrics
 
 
 #setting positions of nodes randomly in the area
@@ -24,29 +24,24 @@ def pos():
     return ar, nd, node_positions
 
 
-# Greedy pairing: pair closest available nodes. This will have to change. 
+# Random pairing: randomly pair available nodes
 def r_data(node_positions):
-    # Greedy pairing: pair closest available nodes
+    # Random pairing: shuffle nodes and pair sequentially
     available_nodes = list(range(len(node_positions)))
+    rnd.shuffle(available_nodes)
     pairs = []
     
-    while len(available_nodes) >= 2:
-        best_dist = np.inf
-        best_pair = None
-        for i in range(len(available_nodes)):
-            for j in range(i + 1, len(available_nodes)):
-                dist = np.linalg.norm(np.array(node_positions[available_nodes[i]]) - np.array(node_positions[available_nodes[j]]))
-                if dist < best_dist:
-                    best_dist = dist
-                    best_pair = (available_nodes[i], available_nodes[j])
-        if best_pair:
-            pairs.append(best_pair)
-            available_nodes.remove(best_pair[0])
-            available_nodes.remove(best_pair[1])
+    for i in range(0, len(available_nodes) - 1, 2):
+        pairs.append((available_nodes[i], available_nodes[i + 1]))
     
-    # Calculate metrics for each pair
+    # Calculate metrics for each pair and collect output
+    output_lines = []
     for tx_idx, rx_idx in pairs:
-        sinr, capacity, dist = calculate_metrics(tx_idx, rx_idx, node_positions)
-        print(f"Pair ({tx_idx}, {rx_idx}): SINR = {sinr:.2f}, Capacity = {capacity:.2f} bps, Distance = {dist:.2f} m")
+        sinr, capacity, dist, fspl = calculate_metrics(tx_idx, rx_idx, node_positions)
+        sinr_db = 10*np.log10(sinr)
+        cap_mbps = capacity/1e6
+        line = f"Node {tx_idx:<4} | Node {rx_idx:<4} | Dist: {dist:<7.2f}m | FSPL: {fspl:<7.2f}dB | SINR: {sinr_db:<8.2f}dB ({sinr:<10.2e}) | Capacity: {capacity:<12.2e} bps ({cap_mbps:<8.2f} Mbps)"
+        output_lines.append(line)
+        print(line)
     
-    return pairs
+    return pairs, output_lines

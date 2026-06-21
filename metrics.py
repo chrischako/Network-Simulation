@@ -38,7 +38,7 @@ def fspl_db(distance_m, frequency_hz):
 def calculate_metrics(tx_idx, rx_idx, pos):
     #Signal
     dist_sig = np.linalg.norm(np.array(pos[tx_idx]) - np.array(pos[rx_idx])) #distance
-    loss_sig = fspl_db(max(dist_sig, 0.1), FREQ) #path loss
+    loss_sig = fspl_db(max(dist_sig, 0.1), FREQ) #path loss (FSPL in dB)
     p_sig_watts = 10**((P_TX_DBM - loss_sig - 30) / 10) #P = power
 
     #Interference
@@ -54,34 +54,29 @@ def calculate_metrics(tx_idx, rx_idx, pos):
     sinr_linear = p_sig_watts / (interference_watts + noise_watts) #sinr
     capacity = BW * np.log2(1 + sinr_linear) #shannon_capacity
     
-    return sinr_linear, capacity, dist_sig
+    return sinr_linear, capacity, dist_sig, loss_sig
 
-# Greedy pairing: pair closest available nodes. This will have to change, The user will have to choose the pairs, but for now i will just pair the closest nodes. I will also calculate the metrics for each pair and print them out.
+# Random pairing: randomly pair available nodes
 def r_data(node_positions): #add a specification for who talks with who and the name of the file which will save the data, also save the data in the correct format (one line)
-    # Greedy pairing: pair closest available nodes
+    # Random pairing: shuffle nodes and pair sequentially
     available_nodes = list(range(len(node_positions)))
+    rnd.shuffle(available_nodes)
     pairs = []
     
-    while len(available_nodes) >= 2:
-        best_dist = np.inf
-        best_pair = None
-        for i in range(len(available_nodes)):
-            for j in range(i + 1, len(available_nodes)):
-                dist = np.linalg.norm(np.array(node_positions[available_nodes[i]]) - np.array(node_positions[available_nodes[j]]))
-                if dist < best_dist:
-                    best_dist = dist
-                    best_pair = (available_nodes[i], available_nodes[j])
-        if best_pair:
-            pairs.append(best_pair)
-            available_nodes.remove(best_pair[0])
-            available_nodes.remove(best_pair[1])
+    for i in range(0, len(available_nodes) - 1, 2):
+        pairs.append((available_nodes[i], available_nodes[i + 1]))
     
-    # Calculate metrics for each pair
+    # Calculate metrics for each pair and collect output
+    output_lines = []
     for tx_idx, rx_idx in pairs:
-        sinr, capacity, dist = calculate_metrics(tx_idx, rx_idx, node_positions)
-        print(f"Pair ({tx_idx}, {rx_idx}): SINR = {sinr:.2f}, Capacity = {capacity:.2f} bps, Distance = {dist:.2f} m")
+        sinr, capacity, dist, fspl = calculate_metrics(tx_idx, rx_idx, node_positions)
+        sinr_db = 10*np.log10(sinr)
+        cap_mbps = capacity/1e6
+        line = f"Nd {tx_idx:<4} | Nd {rx_idx:<4} | Dist: {dist:<7.2f}m | FSPL: {fspl:<7.2f}dB | SINR: {sinr_db:<8.2f}dB ({sinr:<10.2e}) | Capacity: {capacity:<12.2e} bps ({cap_mbps:<8.2f} Mbps)"
+        output_lines.append(line)
+        print(line)
     
-    return pairs
+    return pairs, output_lines
 
 # maybe i need to save the data in only one file, but for now i will save in three different files
 def save_data(node_positions, pairs, metrics):
@@ -100,3 +95,16 @@ def save_data(node_positions, pairs, metrics):
     with open('metrics.txt', 'w') as f:
         for metric in metrics:
             f.write(f"SINR: {metric[0]:.2f}, Capacity: {metric[1]:.2f} bps, Distance: {metric[2]:.2f} m\n")
+
+# Save all results from all tries to a single file
+def save_all_results(trial_num, output_lines, append=True):
+    mode = 'a' if append else 'w'
+    with open('all_results.txt', mode) as f:
+        if not append or trial_num == 1:
+            # Write header only on first trial or if not appending
+            f.write(f"{'Sender':<8} | {'Receiver':<8} | {'Distance':<10} | {'FSPL (dB)':<10} | {'SINR (dB & Linear)':<20} | {'Shannon Capacity (bps & Mbps)':<35}\n")
+            f.write("-" * 130 + "\n")
+        f.write(f"\n=== Trial {trial_num} ===\n")
+        for line in output_lines:
+            f.write(line + "\n")
+        f.write("-" * 130 + "\n")

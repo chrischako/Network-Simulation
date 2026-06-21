@@ -43,40 +43,27 @@ def calculate_metrics(tx_idx, rx_idx, pos):
     sinr_linear = p_sig_watts / (interference_watts + noise_watts) #sinr
     capacity = BW * np.log2(1 + sinr_linear) #shannon_capacity
     
-    return sinr_linear, capacity, dist_sig
+    return sinr_linear, capacity, dist_sig, loss_sig
 
-#maybe i should find the pairs and then calculate the metrics
-#we use a greedy approach to pair closest nodes
+#Random pairing: randomly pair nodes
 available_nodes = list(range(nodes))
+np.random.shuffle(available_nodes)
 pairs = []
 
-while len(available_nodes) >= 2:
-    best_dist = np.inf
-    best_pair = (None, None)
-    
-    #find the closest pair
-    for i in range(len(available_nodes)):
-        for j in range(i + 1, len(available_nodes)):
-            n1, n2 = available_nodes[i], available_nodes[j]
-            d = np.linalg.norm(positions[n1] - positions[n2])
-            if d < best_dist:
-                best_dist = d
-                best_pair = (n1, n2)
-    
-    pairs.append(best_pair)
-    available_nodes.remove(best_pair[0])
-    available_nodes.remove(best_pair[1])
+for i in range(0, len(available_nodes) - 1, 2):
+    pairs.append((available_nodes[i], available_nodes[i + 1]))
 
 #Visualization
 plt.figure(figsize=(10, 8))
-print(f"{'Sender':<8} | {'Receiver':<8} | {'Dist (m)':<8} | {'SINR (dB)':<10} | {'Cap (Mbps)':<10}")
-print("-" * 60)
+print(f"{'Sender':<8} | {'Receiver':<8} | {'Distance':<10} | {'FSPL (dB)':<10} | {'SINR (dB & Linear)':<20} | {'Shannon Capacity (bps & Mbps)':<35}")
+print("-" * 130)
 
 for tx, rx in pairs:
-    sinr_lin, cap, dist = calculate_metrics(tx, rx, positions)
+    sinr_lin, cap, dist, fspl = calculate_metrics(tx, rx, positions)
     sinr_db = 10 * np.log10(sinr_lin)
+    cap_mbps = cap/1e6
     
-    print(f"Node {tx:<4} | Node {rx:<4} | {dist:<8.2f} | {sinr_db:<10.2f} | {cap/1e6:<10.2f}")
+    print(f"Node {tx:<4} | Node {rx:<4} | Dist: {dist:<7.2f}m | FSPL: {fspl:<7.2f}dB | SINR: {sinr_db:<8.2f}dB ({sinr_lin:<10.2e}) | Capacity: {cap:<12.2e} bps ({cap_mbps:<8.2f} Mbps)")
     
     # Plotting the pair
     p1, p2 = positions[tx], positions[rx]
