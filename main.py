@@ -1,8 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import random as rnd
-from metrics import ar, nd, BW, P_TX_DBM, NOISE_DBM, pos
-from metrics import pos, r_data, save_data, calculate_metrics, save_all_results
+from metrics import BW, P_TX_DBM, NOISE_DBM, r_data, save_data, calculate_metrics, save_all_results
 from pos import pos, r_data
 
 for i in range(1, 51):        

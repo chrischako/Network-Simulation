@@ -7,27 +7,6 @@ FREQ = 2.4e9 #Frequency
 BW = 20e6 #Bandwidth
 P_TX_DBM = 20 #Power of the incoming signal
 NOISE_DBM = -90  #Noise power in dBm
-ar = 100 #rea of 100m x 100m
-nd = 20  #number of nodes
-np.random.seed(42)
-
-#setting positions of nodes randomly in the area
-def pos():
-    #setting area
-    ar = 100 #rea of 100m x 100m
-
-    # setting nodes
-    nd = 20  #number of nodes
-    
-    # setting positions of nodes randomly in the area
-    positions = np.random.rand(nd, 2) * ar #putting nodes in radom pos
-    node_positions = []
-    for i in range(nd):
-        x = np.random.uniform(0, ar)
-        y = np.random.uniform(0, ar)
-        node_positions.append((x, y))
-        print(f"Node {i+1} placed at: ({x:.2f}, {y:.2f})")
-    return ar, nd, node_positions
 
 # Free space path loss in dB
 def fspl_db(distance_m, frequency_hz):

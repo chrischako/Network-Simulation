@@ -2,11 +2,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 import random as rnd
 from math import log10
-from metrics import pos, fspl_db, calculate_metrics
+from metrics import fspl_db, calculate_metrics
 
 
 #setting positions of nodes randomly in the area
 def pos():
+    # Reset the random generator so positions stay the same each time this function is called
+    np.random.seed(42)
+
     #setting area
     ar = 100 #rea of 100m x 100m
 
