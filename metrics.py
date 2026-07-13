@@ -36,7 +36,7 @@ def calculate_metrics(tx_idx, rx_idx, pos):
     return sinr_linear, capacity, dist_sig, loss_sig
 
 # Random pairing: randomly pair available nodes
-def r_data(node_positions): #add a specification for who talks with who and the name of the file which will save the data, also save the data in the correct format (one line)
+def r_data(node_positions):
     # Random pairing: shuffle nodes and pair sequentially
     available_nodes = list(range(len(node_positions)))
     rnd.shuffle(available_nodes)
@@ -57,33 +57,29 @@ def r_data(node_positions): #add a specification for who talks with who and the 
     
     return pairs, output_lines
 
-# maybe i need to save the data in only one file, but for now i will save in three different files
-def save_data(node_positions, pairs, metrics):
-    np.save('node_positions.npy', node_positions)
-    np.save('pairs.npy', pairs)
-    np.save('metrics.npy', metrics)
-    
-    with open('node_positions.txt', 'w') as f:
-        for pos in node_positions:
-            f.write(f"{pos[0]:.2f}, {pos[1]:.2f}\n")
-    
-    with open('pairs.txt', 'w') as f:
-        for pair in pairs:
-            f.write(f"{pair[0]}, {pair[1]}\n")
-    
-    with open('metrics.txt', 'w') as f:
-        for metric in metrics:
-            f.write(f"SINR: {metric[0]:.2f}, Capacity: {metric[1]:.2f} bps, Distance: {metric[2]:.2f} m\n")
-
 # Save all results from all tries to a single file
+# and append them to a .npy file across repeated runs.
 def save_all_results(trial_num, output_lines, append=True):
+    # Append text results
     mode = 'a' if append else 'w'
     with open('all_results.txt', mode) as f:
         if not append or trial_num == 1:
-            # Write header only on first trial or if not appending
             f.write(f"{'Sender':<8} | {'Receiver':<8} | {'Distance':<10} | {'FSPL (dB)':<10} | {'SINR (dB & Linear)':<20} | {'Shannon Capacity (bps & Mbps)':<35}\n")
             f.write("-" * 130 + "\n")
         f.write(f"\n=== Trial {trial_num} ===\n")
         for line in output_lines:
             f.write(line + "\n")
         f.write("-" * 130 + "\n")
+
+    # Append results to a .npy file in a format that can be loaded later
+    npy_path = 'all_results.npy'
+    if append and trial_num > 1:
+        existing = []
+        try:
+            existing = list(np.load(npy_path, allow_pickle=True))
+        except FileNotFoundError:
+            existing = []
+        existing.append((trial_num, output_lines))
+        np.save(npy_path, np.array(existing, dtype=object))
+    else:
+        np.save(npy_path, np.array([(trial_num, output_lines)], dtype=object))

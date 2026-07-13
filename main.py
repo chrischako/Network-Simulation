@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import random as rnd
-from metrics import BW, P_TX_DBM, NOISE_DBM, r_data, save_data, calculate_metrics, save_all_results
+from metrics import BW, P_TX_DBM, NOISE_DBM, r_data, calculate_metrics, save_all_results
 from pos import pos, r_data
 
 for i in range(1, 51):        
@@ -9,7 +9,7 @@ for i in range(1, 51):
         ar, nd, node_positions = pos()
         pairs, output_lines = r_data(node_positions)
         metrics_data = [(calculate_metrics(tx_idx, rx_idx, node_positions)[:3]) for tx_idx, rx_idx in pairs]
-        save_data(node_positions, pairs, metrics_data)
+        #save_data(node_positions, pairs, metrics_data)
         save_all_results(i, output_lines, append=(i > 1))
         
         # Plot the nodes and pairs
