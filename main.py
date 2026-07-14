@@ -4,8 +4,8 @@ import random as rnd
 from metrics import BW, P_TX_DBM, NOISE_DBM, r_data, calculate_metrics, save_all_results
 from pos import pos, r_data
 
-for i in range(1, 51):        
-    if __name__ == "__main__":
+if __name__ == "__main__":
+    for i in range(1, 51):
         ar, nd, node_positions = pos()
         pairs, output_lines = r_data(node_positions)
         metrics_data = [(calculate_metrics(tx_idx, rx_idx, node_positions)[:3]) for tx_idx, rx_idx in pairs]
