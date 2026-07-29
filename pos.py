@@ -2,24 +2,23 @@ import numpy as np
 import matplotlib.pyplot as plt
 import random as rnd
 from math import log10
-from metrics import pos, fspl_db, calculate_metrics
+from metrics import fspl_db, calculate_metrics
 
 
 #setting positions of nodes randomly in the area
-def pos():
+def pos(seed=42):
     #setting area
     ar = 100 #rea of 100m x 100m
 
     # setting nodes
     nd = 20  #number of nodes
     
-    # setting positions of nodes randomly in the area
-    positions = np.random.rand(nd, 2) * ar #putting nodes in radom pos
+    # deterministic positions from a fixed seed
+    rng = np.random.default_rng(seed)
     node_positions = []
     for i in range(nd):
-        x = np.random.uniform(0, ar)
-        y = np.random.uniform(0, ar)
-        node_positions.append((x, y))
+        x, y = rng.uniform(0, ar, size=2)
+        node_positions.append((float(x), float(y)))
         print(f"Node {i+1} placed at: ({x:.2f}, {y:.2f})")
     return ar, nd, node_positions
 

@@ -2,14 +2,27 @@ Sender   | Receiver | Distance   | FSPL (dB)  | SINR (dB & Linear)   | Shannon C
 ----------------------------------------------------------------------------------------------------------------------------------
 
 === Trial 1 ===
-Node 1    | Node 18   | Dist: 111.39 m | FSPL: 80.98  dB | SINR: -21.90  dB (6.45e-03  ) | Capacity: 1.86e+05     bps (0.19     Mbps)
-Node 12   | Node 14   | Dist: 48.98  m | FSPL: 73.85  dB | SINR: -17.23  dB (1.89e-02  ) | Capacity: 5.41e+05     bps (0.54     Mbps)
-Node 7    | Node 8    | Dist: 88.68  m | FSPL: 79.00  dB | SINR: -20.01  dB (9.98e-03  ) | Capacity: 2.86e+05     bps (0.29     Mbps)
-Node 15   | Node 11   | Dist: 16.78  m | FSPL: 64.54  dB | SINR: -2.70   dB (5.36e-01  ) | Capacity: 1.24e+07     bps (12.39    Mbps)
-Node 0    | Node 9    | Dist: 18.64  m | FSPL: 65.46  dB | SINR: -6.26   dB (2.36e-01  ) | Capacity: 6.13e+06     bps (6.13     Mbps)
-Node 19   | Node 6    | Dist: 97.18  m | FSPL: 79.80  dB | SINR: -20.16  dB (9.64e-03  ) | Capacity: 2.77e+05     bps (0.28     Mbps)
-Node 10   | Node 4    | Dist: 18.02  m | FSPL: 65.16  dB | SINR: -5.52   dB (2.80e-01  ) | Capacity: 7.13e+06     bps (7.13     Mbps)
-Node 17   | Node 13   | Dist: 57.06  m | FSPL: 75.17  dB | SINR: -18.35  dB (1.46e-02  ) | Capacity: 4.19e+05     bps (0.42     Mbps)
-Node 2    | Node 3    | Dist: 15.20  m | FSPL: 63.68  dB | SINR: -12.66  dB (5.41e-02  ) | Capacity: 1.52e+06     bps (1.52     Mbps)
-Node 5    | Node 16   | Dist: 96.49  m | FSPL: 79.74  dB | SINR: -23.50  dB (4.47e-03  ) | Capacity: 1.29e+05     bps (0.13     Mbps)
+Node 18   | Node 11   | Dist: 93.87  m | FSPL: 79.50  dB | SINR: -19.41  dB (1.14e-02  ) | Capacity: 3.28e+05     bps (0.33     Mbps)
+Node 8    | Node 13   | Dist: 9.01   m | FSPL: 59.14  dB | SINR: -0.05   dB (9.89e-01  ) | Capacity: 1.98e+07     bps (19.84    Mbps)
+Node 1    | Node 12   | Dist: 50.91  m | FSPL: 74.18  dB | SINR: -15.14  dB (3.06e-02  ) | Capacity: 8.71e+05     bps (0.87     Mbps)
+Node 19   | Node 9    | Dist: 60.19  m | FSPL: 75.64  dB | SINR: -20.73  dB (8.46e-03  ) | Capacity: 2.43e+05     bps (0.24     Mbps)
+Node 10   | Node 7    | Dist: 33.94  m | FSPL: 70.66  dB | SINR: -18.48  dB (1.42e-02  ) | Capacity: 4.07e+05     bps (0.41     Mbps)
+Node 2    | Node 15   | Dist: 65.06  m | FSPL: 76.31  dB | SINR: -17.42  dB (1.81e-02  ) | Capacity: 5.18e+05     bps (0.52     Mbps)
+Node 5    | Node 6    | Dist: 29.22  m | FSPL: 69.36  dB | SINR: -11.84  dB (6.54e-02  ) | Capacity: 1.83e+06     bps (1.83     Mbps)
+Node 3    | Node 0    | Dist: 34.74  m | FSPL: 70.86  dB | SINR: -14.72  dB (3.37e-02  ) | Capacity: 9.57e+05     bps (0.96     Mbps)
+Node 17   | Node 14   | Dist: 58.57  m | FSPL: 75.40  dB | SINR: -19.84  dB (1.04e-02  ) | Capacity: 2.98e+05     bps (0.30     Mbps)
+Node 4    | Node 16   | Dist: 21.33  m | FSPL: 66.62  dB | SINR: -7.91   dB (1.62e-01  ) | Capacity: 4.33e+06     bps (4.33     Mbps)
+----------------------------------------------------------------------------------------------------------------------------------
+
+=== Trial 2 ===
+Node 2    | Node 6    | Dist: 57.05  m | FSPL: 75.17  dB | SINR: -17.86  dB (1.64e-02  ) | Capacity: 4.69e+05     bps (0.47     Mbps)
+Node 10   | Node 3    | Dist: 43.15  m | FSPL: 72.75  dB | SINR: -16.63  dB (2.17e-02  ) | Capacity: 6.20e+05     bps (0.62     Mbps)
+Node 15   | Node 8    | Dist: 92.35  m | FSPL: 79.35  dB | SINR: -23.26  dB (4.72e-03  ) | Capacity: 1.36e+05     bps (0.14     Mbps)
+Node 5    | Node 0    | Dist: 63.29  m | FSPL: 76.07  dB | SINR: -20.03  dB (9.93e-03  ) | Capacity: 2.85e+05     bps (0.29     Mbps)
+Node 7    | Node 1    | Dist: 62.72  m | FSPL: 75.99  dB | SINR: -21.28  dB (7.45e-03  ) | Capacity: 2.14e+05     bps (0.21     Mbps)
+Node 9    | Node 14   | Dist: 67.53  m | FSPL: 76.64  dB | SINR: -21.09  dB (7.79e-03  ) | Capacity: 2.24e+05     bps (0.22     Mbps)
+Node 13   | Node 12   | Dist: 34.62  m | FSPL: 70.83  dB | SINR: -11.63  dB (6.87e-02  ) | Capacity: 1.92e+06     bps (1.92     Mbps)
+Node 16   | Node 17   | Dist: 23.11  m | FSPL: 67.32  dB | SINR: -15.22  dB (3.00e-02  ) | Capacity: 8.54e+05     bps (0.85     Mbps)
+Node 18   | Node 11   | Dist: 93.87  m | FSPL: 79.50  dB | SINR: -19.41  dB (1.14e-02  ) | Capacity: 3.28e+05     bps (0.33     Mbps)
+Node 4    | Node 19   | Dist: 24.06  m | FSPL: 67.67  dB | SINR: -11.98  dB (6.33e-02  ) | Capacity: 1.77e+06     bps (1.77     Mbps)
 ----------------------------------------------------------------------------------------------------------------------------------

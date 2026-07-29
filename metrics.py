@@ -9,8 +9,8 @@ P_TX_DBM = 20 #Power of the incoming signal
 NOISE_DBM = -90  #Noise power in dBm
 ar = 100 #rea of 100m x 100m
 nd = 20  #number of nodes
-np.random.seed(42)
-
+#np.random.seed(42)
+'''
 #setting positions of nodes randomly in the area
 def pos():
     #setting area
@@ -19,8 +19,9 @@ def pos():
     # setting nodes
     nd = 20  #number of nodes
     
-    # setting positions of nodes randomly in the area
-    positions = np.random.rand(nd, 2) * ar #putting nodes in radom pos
+    # setting positions of nodes randomly in the area they need to be stable for the whole simulation, so i will set them in a random way but they will be the same for all the tries
+    #positions = np.random.rand(nd, 2) * ar #putting nodes in radom pos
+    
     node_positions = []
     for i in range(nd):
         x = np.random.uniform(0, ar)
@@ -28,7 +29,7 @@ def pos():
         node_positions.append((x, y))
         print(f"Node {i+1} placed at: ({x:.2f}, {y:.2f})")
     return ar, nd, node_positions
-
+    '''
 # Free space path loss in dB
 def fspl_db(distance_m, frequency_hz):
     if distance_m <= 0.1: return 0
@@ -77,24 +78,6 @@ def r_data(node_positions): #add a specification for who talks with who and the 
         print(line)
     
     return pairs, output_lines
-
-# maybe i need to save the data in only one file, but for now i will save in three different files
-def save_data(node_positions, pairs, metrics):
-    np.save('node_positions.npy', node_positions)
-    np.save('pairs.npy', pairs)
-    np.save('metrics.npy', metrics)
-    
-    with open('node_positions.txt', 'w') as f:
-        for pos in node_positions:
-            f.write(f"{pos[0]:.2f}, {pos[1]:.2f}\n")
-    
-    with open('pairs.txt', 'w') as f:
-        for pair in pairs:
-            f.write(f"{pair[0]}, {pair[1]}\n")
-    
-    with open('metrics.txt', 'w') as f:
-        for metric in metrics:
-            f.write(f"SINR: {metric[0]:.2f}, Capacity: {metric[1]:.2f} bps, Distance: {metric[2]:.2f} m\n")
 
 # Save all results from all tries to a single file
 def save_all_results(trial_num, output_lines, append=True):
