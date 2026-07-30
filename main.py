@@ -1,33 +1,50 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import random as rnd
-from metrics import calculate_metrics, save_all_results
+from metrics import save_all_results
 from pos import pos, r_data
 
 np.random.seed(42)
 
 if __name__ == "__main__":
-    ar, nd, node_positions = pos()
+    ar, nd, node_positions, roles = pos()
+    pairs, output_lines = r_data(node_positions, roles)
+
     for i in range(1, 51):
-        pairs, output_lines = r_data(node_positions)
-        metrics_data = [(calculate_metrics(tx_idx, rx_idx, node_positions)[:3]) for tx_idx, rx_idx in pairs]
         save_all_results(i, output_lines, append=(i > 1))
-        
-        # Plot the nodes and pairs
-        plt.figure(figsize=(8, 8))
-        x_coords = [pos[0] for pos in node_positions]
-        y_coords = [pos[1] for pos in node_positions]
-        plt.scatter(x_coords, y_coords, c='blue', label='Nodes')
-        
-        for tx_idx, rx_idx in pairs:
-            plt.plot([node_positions[tx_idx][0], node_positions[rx_idx][0]], 
-                    [node_positions[tx_idx][1], node_positions[rx_idx][1]], 'r-')
-        
-        plt.xlim(0, ar)
-        plt.ylim(0, ar)
-        plt.xlabel('X position')
-        plt.ylabel('Y position')
-        plt.title('Node Positions and Pairs')
-        plt.legend()
-        plt.grid(True)
-        plt.show()
+
+    # Plot the nodes and links once using the same fixed positions
+    plt.figure(figsize=(8, 8))
+
+    tx_indices = [idx for idx, role in enumerate(roles) if role == 'T']
+    rx_indices = [idx for idx, role in enumerate(roles) if role == 'R']
+
+    plt.scatter(
+        [node_positions[idx][0] for idx in tx_indices],
+        [node_positions[idx][1] for idx in tx_indices],
+        c='green', s=80, label='Transmitters'
+    )
+    plt.scatter(
+        [node_positions[idx][0] for idx in rx_indices],
+        [node_positions[idx][1] for idx in rx_indices],
+        c='red', s=80, label='Receivers'
+    )
+
+    for tx_idx, rx_idx in pairs:
+        plt.plot(
+            [node_positions[tx_idx][0], node_positions[rx_idx][0]],
+            [node_positions[tx_idx][1], node_positions[rx_idx][1]],
+            'k--', alpha=0.4
+        )
+
+    for idx, role in enumerate(roles):
+        x, y = node_positions[idx]
+        plt.text(x + 0.8, y + 0.8, f"{idx} ({role})")
+
+    plt.xlim(0, ar)
+    plt.ylim(0, ar)
+    plt.xlabel('X position')
+    plt.ylabel('Y position')
+    plt.title('Node Positions and Traffic Roles')
+    plt.legend()
+    plt.grid(True)
+    plt.show()
