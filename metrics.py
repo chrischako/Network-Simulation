@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import matplotlib.pyplot as plt
 import random as rnd
@@ -79,15 +80,52 @@ def r_data(node_positions): #add a specification for who talks with who and the 
     
     return pairs, output_lines
 
-# Save all results from all tries to a single file
-def save_all_results(trial_num, output_lines, append=True):
-    mode = 'a' if append else 'w'
-    with open('all_results.txt', mode) as f:
+
+def _make_result_dtype():
+    return np.dtype([
+        ("trial_num", np.int32),
+        ("t_count", np.int32),
+        ("r_count", np.int32),
+        ("distance", np.float64),
+        ("fspl", np.float64),
+        ("sinr_db", np.float64),
+        ("capacity", np.float64),
+    ])
+
+
+# Save all results from all tries to text and numpy files.
+def save_all_results(trial_num, pairs, roles, node_positions, output_lines=None, append=True, txt_path="results.txt", npy_path="results.npy"):
+    t_count = roles.count("T")
+    r_count = roles.count("R")
+    records = []
+
+    for tx_idx, rx_idx in pairs:
+        sinr, capacity, dist, fspl = calculate_metrics(tx_idx, rx_idx, node_positions)
+        sinr_db = 10 * np.log10(sinr)
+        records.append((trial_num, t_count, r_count, dist, fspl, sinr_db, capacity))
+
+    text_mode = "a" if append else "w"
+    with open(txt_path, text_mode) as f:
         if not append or trial_num == 1:
-            # Write header only on first trial or if not appending
-            f.write(f"{'Sender':<8} | {'Receiver':<8} | {'Distance':<10} | {'FSPL (dB)':<10} | {'SINR (dB & Linear)':<20} | {'Shannon Capacity (bps & Mbps)':<35}\n")
-            f.write("-" * 130 + "\n")
-        f.write(f"\n=== Trial {trial_num} ===\n")
+            f.write("Trial | T | R | distance | fspl | sinr_db | capacity\n")
+        f.write(f"Trial {trial_num}: T={t_count}, R={r_count}\n")
+        for tx_idx, rx_idx in pairs:
+            sinr, capacity, dist, fspl = calculate_metrics(tx_idx, rx_idx, node_positions)
+            sinr_db = 10 * np.log10(sinr)
+            f.write(f"T={t_count}, R={r_count} | distance={dist:.4f} m | fspl={fspl:.4f} dB | sinr={sinr_db:.4f} dB | capacity={capacity:.6e} bps\n")
+        f.write("-" * 100 + "\n")
+
+    if append and os.path.exists(npy_path):
+        existing = np.load(npy_path, allow_pickle=False)
+        if existing.size == 0:
+            new_array = np.array(records, dtype=_make_result_dtype())
+        else:
+            new_array = np.concatenate([existing, np.array(records, dtype=_make_result_dtype())])
+    else:
+        new_array = np.array(records, dtype=_make_result_dtype())
+
+    np.save(npy_path, new_array)
+
+    if output_lines is not None:
         for line in output_lines:
-            f.write(line + "\n")
-        f.write("-" * 130 + "\n")
+            print(line)

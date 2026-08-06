@@ -9,7 +9,7 @@ if __name__ == "__main__":
 
     for i in range(1, 51):
         pairs, output_lines = r_data(node_positions, roles)
-        save_all_results(i, output_lines, append=(i > 1))
+        save_all_results(i, pairs, roles, node_positions, output_lines=output_lines, append=(i > 1))
 
     # Plot the nodes and links once using the same fixed positions
     plt.figure(figsize=(8, 8))
