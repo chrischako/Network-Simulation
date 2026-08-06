@@ -5,49 +5,48 @@ from math import log10
 from metrics import fspl_db, calculate_metrics
 
 
-_cached_result = None
-
-
 # setting positions of nodes randomly in the area
 def pos(seed=42):
-    global _cached_result
-
-    if _cached_result is not None:
-        return _cached_result
-
     # setting area
     ar = 100  # area of 100m x 100m
 
     # setting nodes
     nd = 20  # number of nodes
 
-    # deterministic positions from a fixed seed
-    rng = np.random.default_rng(seed)
+    # positions stay deterministic for a given seed
+    position_rng = np.random.default_rng(seed)
+    role_rng = np.random.default_rng(seed)
+
     node_positions = []
     roles = []
     for i in range(nd):
-        x, y = rng.uniform(0, ar, size=2)
-        role = "T" if rng.random() < 0.5 else "R"
+        x, y = position_rng.uniform(0, ar, size=2)
+        role = "T" if role_rng.random() < 0.5 else "R"
         node_positions.append((float(x), float(y)))
         roles.append(role)
         print(f"Node {i+1} placed at: ({x:.2f}, {y:.2f}) as {role}")
 
-    _cached_result = (ar, nd, node_positions, roles)
-    return _cached_result
+    return ar, nd, node_positions, roles
 
 
-# Build one-to-many transmit/receive links
-def r_data(node_positions, roles=None):
+# Build one-to-one transmit/receive links by randomly assigning each transmitter a distinct receiver.
+def r_data(node_positions, roles=None, seed=None):
     if roles is None:
         roles = ["R"] * len(node_positions)
 
+    rng = np.random.default_rng(seed)
+    tx_indices = [idx for idx, role in enumerate(roles) if role == "T"]
+    receiver_indices = [idx for idx, role in enumerate(roles) if role == "R"]
     pairs = []
-    for tx_idx, tx_role in enumerate(roles):
-        if tx_role != "T":
-            continue
-        for rx_idx, rx_role in enumerate(roles):
-            if tx_idx == rx_idx or rx_role != "R":
-                continue
+
+    if receiver_indices:
+        available_receivers = receiver_indices.copy()
+        rng.shuffle(available_receivers)
+
+        for tx_idx in tx_indices:
+            if not available_receivers:
+                break
+            rx_idx = available_receivers.pop()
             pairs.append((tx_idx, rx_idx))
 
     output_lines = []

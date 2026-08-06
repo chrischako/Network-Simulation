@@ -3,13 +3,12 @@ import matplotlib.pyplot as plt
 from metrics import save_all_results
 from pos import pos, r_data
 
-np.random.seed(42)
-
 if __name__ == "__main__":
     ar, nd, node_positions, roles = pos()
-    pairs, output_lines = r_data(node_positions, roles)
+    pairs = []
 
     for i in range(1, 51):
+        pairs, output_lines = r_data(node_positions, roles)
         save_all_results(i, output_lines, append=(i > 1))
 
     # Plot the nodes and links once using the same fixed positions
