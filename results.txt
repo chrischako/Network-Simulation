@@ -1,501 +1,501 @@
 Trial | T | R | distance | fspl | sinr_db | capacity
 Trial 1: T=8, R=12
-T=1, R=0 | distance=27.1995 m | fspl=68.7372 dB | sinr=-12.4989 dB | capacity=1.578967e+06 bps
+T=1, R=18 | distance=76.1645 m | fspl=77.6811 dB | sinr=-29.8307 dB | capacity=2.998543e+04 bps
 T=4, R=11 | distance=95.1821 m | fspl=79.6171 dB | sinr=-19.5355 dB | capacity=3.193380e+05 bps
-T=8, R=16 | distance=38.2571 m | fspl=71.7002 dB | sinr=-13.4432 dB | capacity=1.277138e+06 bps
-T=9, R=12 | distance=43.9792 m | fspl=72.9109 dB | sinr=-13.8211 dB | capacity=1.172843e+06 bps
-T=10, R=2 | distance=90.9141 m | fspl=79.2186 dB | sinr=-17.0747 dB | capacity=5.604163e+05 bps
-T=14, R=5 | distance=32.5996 m | fspl=70.3102 dB | sinr=-9.3659 dB | capacity=3.159517e+06 bps
-T=15, R=18 | distance=78.7338 m | fspl=77.9692 dB | sinr=-30.1191 dB | capacity=2.805946e+04 bps
-T=17, R=3 | distance=66.4036 m | fspl=76.4898 dB | sinr=-20.4277 dB | capacity=2.602975e+05 bps
-----------------------------------------------------------------------------------------------------
-Trial 2: T=8, R=12
-T=1, R=19 | distance=63.2289 m | fspl=76.0643 dB | sinr=-20.6048 dB | capacity=2.499430e+05 bps
-T=4, R=2 | distance=52.6332 m | fspl=74.4712 dB | sinr=-12.1549 dB | capacity=1.705354e+06 bps
-T=8, R=3 | distance=75.1203 m | fspl=77.5611 dB | sinr=-21.5076 dB | capacity=2.031937e+05 bps
-T=9, R=11 | distance=29.8040 m | fspl=69.5315 dB | sinr=-8.9808 dB | capacity=3.435665e+06 bps
-T=10, R=7 | distance=33.9443 m | fspl=70.6613 dB | sinr=-18.4752 dB | capacity=4.070198e+05 bps
-T=14, R=18 | distance=20.8771 m | fspl=66.4394 dB | sinr=-18.5331 dB | capacity=4.016699e+05 bps
-T=15, R=12 | distance=77.3602 m | fspl=77.8163 dB | sinr=-18.8468 dB | capacity=3.738633e+05 bps
-T=17, R=13 | distance=14.5695 m | fspl=63.3149 dB | sinr=-6.2914 dB | capacity=6.087548e+06 bps
-----------------------------------------------------------------------------------------------------
-Trial 3: T=8, R=12
-T=1, R=3 | distance=13.1777 m | fspl=62.4428 dB | sinr=-5.2958 dB | capacity=7.468092e+06 bps
-T=4, R=7 | distance=38.6276 m | fspl=71.7840 dB | sinr=-19.6119 dB | capacity=3.138004e+05 bps
-T=8, R=16 | distance=38.2571 m | fspl=71.7002 dB | sinr=-13.4432 dB | capacity=1.277138e+06 bps
-T=9, R=12 | distance=43.9792 m | fspl=72.9109 dB | sinr=-13.8211 dB | capacity=1.172843e+06 bps
-T=10, R=6 | distance=48.1966 m | fspl=73.7063 dB | sinr=-16.3645 dB | capacity=6.588487e+05 bps
-T=14, R=11 | distance=84.3002 m | fspl=78.5626 dB | sinr=-18.4677 dB | capacity=4.077247e+05 bps
-T=15, R=5 | distance=37.6177 m | fspl=71.5538 dB | sinr=-10.7329 dB | capacity=2.339861e+06 bps
-T=17, R=18 | distance=44.4163 m | fspl=72.9969 dB | sinr=-25.1377 dB | capacity=8.826103e+04 bps
-----------------------------------------------------------------------------------------------------
-Trial 4: T=8, R=12
-T=1, R=2 | distance=81.3489 m | fspl=78.2530 dB | sinr=-16.0878 dB | capacity=7.016641e+05 bps
-T=4, R=6 | distance=63.6131 m | fspl=76.1169 dB | sinr=-18.8176 dB | capacity=3.763618e+05 bps
-T=8, R=11 | distance=92.7844 m | fspl=79.3955 dB | sinr=-19.3114 dB | capacity=3.361530e+05 bps
-T=9, R=18 | distance=71.4928 m | fspl=77.1312 dB | sinr=-29.2803 dB | capacity=3.403469e+04 bps
-T=10, R=13 | distance=42.5961 m | fspl=72.6334 dB | sinr=-16.4285 dB | capacity=6.493250e+05 bps
+T=8, R=13 | distance=9.0114 m | fspl=59.1419 dB | sinr=-0.0486 dB | capacity=1.983897e+07 bps
+T=9, R=0 | distance=20.0119 m | fspl=66.0717 dB | sinr=-9.6214 dB | capacity=2.988019e+06 bps
+T=10, R=12 | distance=16.1170 m | fspl=64.1917 dB | sinr=-3.7504 dB | capacity=1.015143e+07 bps
 T=14, R=5 | distance=32.5996 m | fspl=70.3102 dB | sinr=-9.3659 dB | capacity=3.159517e+06 bps
 T=15, R=19 | distance=59.7323 m | fspl=75.5702 dB | sinr=-20.1061 dB | capacity=2.802090e+05 bps
-T=17, R=0 | distance=39.3527 m | fspl=71.9455 dB | sinr=-15.8330 dB | capacity=7.435324e+05 bps
+T=17, R=16 | distance=23.1117 m | fspl=67.3226 dB | sinr=-8.7094 dB | capacity=3.643798e+06 bps
 ----------------------------------------------------------------------------------------------------
-Trial 5: T=8, R=12
-T=1, R=0 | distance=27.1995 m | fspl=68.7372 dB | sinr=-12.4989 dB | capacity=1.578967e+06 bps
-T=4, R=16 | distance=21.3256 m | fspl=66.6240 dB | sinr=-7.9075 dB | capacity=4.329722e+06 bps
-T=8, R=7 | distance=19.7650 m | fspl=65.9639 dB | sinr=-13.6558 dB | capacity=1.217379e+06 bps
-T=9, R=11 | distance=29.8040 m | fspl=69.5315 dB | sinr=-8.9808 dB | capacity=3.435665e+06 bps
-T=10, R=3 | distance=43.1549 m | fspl=72.7466 dB | sinr=-16.6303 dB | capacity=6.201469e+05 bps
-T=14, R=12 | distance=79.2488 m | fspl=78.0259 dB | sinr=-19.0589 dB | capacity=3.561468e+05 bps
-T=15, R=6 | distance=17.6443 m | fspl=64.9781 dB | sinr=-6.9344 dB | capacity=5.322289e+06 bps
-T=17, R=5 | distance=74.3878 m | fspl=77.4760 dB | sinr=-16.9199 dB | capacity=5.805541e+05 bps
+Trial 2: T=8, R=12
+T=1, R=12 | distance=50.9089 m | fspl=74.1819 dB | sinr=-15.1375 dB | capacity=8.707376e+05 bps
+T=4, R=2 | distance=52.6332 m | fspl=74.4712 dB | sinr=-12.1549 dB | capacity=1.705354e+06 bps
+T=8, R=19 | distance=68.8915 m | fspl=76.8093 dB | sinr=-21.3558 dB | capacity=2.103995e+05 bps
+T=9, R=0 | distance=20.0119 m | fspl=66.0717 dB | sinr=-9.6214 dB | capacity=2.988019e+06 bps
+T=10, R=16 | distance=43.2556 m | fspl=72.7668 dB | sinr=-14.5524 dB | capacity=9.941717e+05 bps
+T=14, R=7 | distance=53.9774 m | fspl=74.6902 dB | sinr=-22.5413 dB | capacity=1.602770e+05 bps
+T=15, R=11 | distance=23.7867 m | fspl=67.5727 dB | sinr=-6.6972 dB | capacity=5.593835e+06 bps
+T=17, R=18 | distance=44.4163 m | fspl=72.9969 dB | sinr=-25.1377 dB | capacity=8.826103e+04 bps
 ----------------------------------------------------------------------------------------------------
-Trial 6: T=8, R=12
-T=1, R=6 | distance=24.8664 m | fspl=67.9583 dB | sinr=-10.3307 dB | capacity=2.557093e+06 bps
-T=4, R=5 | distance=53.4633 m | fspl=74.6071 dB | sinr=-13.9675 dB | capacity=1.134709e+06 bps
-T=8, R=18 | distance=59.1600 m | fspl=75.4866 dB | sinr=-27.6332 dB | capacity=4.971741e+04 bps
-T=9, R=12 | distance=43.9792 m | fspl=72.9109 dB | sinr=-13.8211 dB | capacity=1.172843e+06 bps
-T=10, R=0 | distance=8.5832 m | fspl=58.7190 dB | sinr=0.6049 dB | capacity=2.207925e+07 bps
-T=14, R=16 | distance=35.6562 m | fspl=71.0887 dB | sinr=-12.8018 dB | capacity=1.475266e+06 bps
-T=15, R=3 | distance=18.2183 m | fspl=65.2562 dB | sinr=-8.6815 dB | capacity=3.665867e+06 bps
-T=17, R=19 | distance=53.8151 m | fspl=74.6641 dB | sinr=-19.1902 dB | capacity=3.456075e+05 bps
-----------------------------------------------------------------------------------------------------
-Trial 7: T=8, R=12
+Trial 3: T=8, R=12
 T=1, R=2 | distance=81.3489 m | fspl=78.2530 dB | sinr=-16.0878 dB | capacity=7.016641e+05 bps
-T=4, R=16 | distance=21.3256 m | fspl=66.6240 dB | sinr=-7.9075 dB | capacity=4.329722e+06 bps
-T=8, R=5 | distance=88.2302 m | fspl=78.9583 dB | sinr=-18.4276 dB | capacity=4.114750e+05 bps
-T=9, R=18 | distance=71.4928 m | fspl=77.1312 dB | sinr=-29.2803 dB | capacity=3.403469e+04 bps
-T=10, R=7 | distance=33.9443 m | fspl=70.6613 dB | sinr=-18.4752 dB | capacity=4.070198e+05 bps
-T=14, R=3 | distance=61.5532 m | fspl=75.8310 dB | sinr=-19.7625 dB | capacity=3.031621e+05 bps
-T=15, R=13 | distance=96.4645 m | fspl=79.7333 dB | sinr=-23.6073 dB | capacity=1.254682e+05 bps
-T=17, R=6 | distance=65.6841 m | fspl=76.3952 dB | sinr=-19.0994 dB | capacity=3.528597e+05 bps
-----------------------------------------------------------------------------------------------------
-Trial 8: T=8, R=12
-T=1, R=11 | distance=22.5579 m | fspl=67.1120 dB | sinr=-6.1312 dB | capacity=6.293090e+06 bps
-T=4, R=19 | distance=24.0643 m | fspl=67.6735 dB | sinr=-11.9850 dB | capacity=1.771363e+06 bps
-T=8, R=7 | distance=19.7650 m | fspl=65.9639 dB | sinr=-13.6558 dB | capacity=1.217379e+06 bps
+T=4, R=18 | distance=2.5383 m | fspl=48.1370 dB | sinr=11.5902 dB | capacity=7.893815e+07 bps
+T=8, R=3 | distance=75.1203 m | fspl=77.5611 dB | sinr=-21.5076 dB | capacity=2.031937e+05 bps
 T=9, R=12 | distance=43.9792 m | fspl=72.9109 dB | sinr=-13.8211 dB | capacity=1.172843e+06 bps
 T=10, R=5 | distance=69.0978 m | fspl=76.8353 dB | sinr=-16.2650 dB | capacity=6.739352e+05 bps
-T=14, R=0 | distance=66.6037 m | fspl=76.5160 dB | sinr=-20.4766 dB | capacity=2.573970e+05 bps
-T=15, R=2 | distance=65.0635 m | fspl=76.3128 dB | sinr=-14.0869 dB | capacity=1.104519e+06 bps
-T=17, R=3 | distance=66.4036 m | fspl=76.4898 dB | sinr=-20.4277 dB | capacity=2.602975e+05 bps
-----------------------------------------------------------------------------------------------------
-Trial 9: T=8, R=12
-T=1, R=11 | distance=22.5579 m | fspl=67.1120 dB | sinr=-6.1312 dB | capacity=6.293090e+06 bps
-T=4, R=19 | distance=24.0643 m | fspl=67.6735 dB | sinr=-11.9850 dB | capacity=1.771363e+06 bps
-T=8, R=18 | distance=59.1600 m | fspl=75.4866 dB | sinr=-27.6332 dB | capacity=4.971741e+04 bps
-T=9, R=12 | distance=43.9792 m | fspl=72.9109 dB | sinr=-13.8211 dB | capacity=1.172843e+06 bps
-T=10, R=0 | distance=8.5832 m | fspl=58.7190 dB | sinr=0.6049 dB | capacity=2.207925e+07 bps
 T=14, R=16 | distance=35.6562 m | fspl=71.0887 dB | sinr=-12.8018 dB | capacity=1.475266e+06 bps
-T=15, R=6 | distance=17.6443 m | fspl=64.9781 dB | sinr=-6.9344 dB | capacity=5.322289e+06 bps
-T=17, R=5 | distance=74.3878 m | fspl=77.4760 dB | sinr=-16.9199 dB | capacity=5.805541e+05 bps
+T=15, R=11 | distance=23.7867 m | fspl=67.5727 dB | sinr=-6.6972 dB | capacity=5.593835e+06 bps
+T=17, R=13 | distance=14.5695 m | fspl=63.3149 dB | sinr=-6.2914 dB | capacity=6.087548e+06 bps
 ----------------------------------------------------------------------------------------------------
-Trial 10: T=8, R=12
-T=1, R=11 | distance=22.5579 m | fspl=67.1120 dB | sinr=-6.1312 dB | capacity=6.293090e+06 bps
-T=4, R=12 | distance=69.8754 m | fspl=76.9325 dB | sinr=-17.9501 dB | capacity=4.589207e+05 bps
-T=8, R=6 | distance=76.4178 m | fspl=77.7099 dB | sinr=-20.4281 dB | capacity=2.602787e+05 bps
-T=9, R=0 | distance=20.0119 m | fspl=66.0717 dB | sinr=-9.6214 dB | capacity=2.988019e+06 bps
-T=10, R=13 | distance=42.5961 m | fspl=72.6334 dB | sinr=-16.4285 dB | capacity=6.493250e+05 bps
-T=14, R=3 | distance=61.5532 m | fspl=75.8310 dB | sinr=-19.7625 dB | capacity=3.031621e+05 bps
-T=15, R=2 | distance=65.0635 m | fspl=76.3128 dB | sinr=-14.0869 dB | capacity=1.104519e+06 bps
-T=17, R=5 | distance=74.3878 m | fspl=77.4760 dB | sinr=-16.9199 dB | capacity=5.805541e+05 bps
-----------------------------------------------------------------------------------------------------
-Trial 11: T=8, R=12
-T=1, R=19 | distance=63.2289 m | fspl=76.0643 dB | sinr=-20.6048 dB | capacity=2.499430e+05 bps
-T=4, R=7 | distance=38.6276 m | fspl=71.7840 dB | sinr=-19.6119 dB | capacity=3.138004e+05 bps
+Trial 4: T=8, R=12
+T=1, R=12 | distance=50.9089 m | fspl=74.1819 dB | sinr=-15.1375 dB | capacity=8.707376e+05 bps
+T=4, R=18 | distance=2.5383 m | fspl=48.1370 dB | sinr=11.5902 dB | capacity=7.893815e+07 bps
 T=8, R=6 | distance=76.4178 m | fspl=77.7099 dB | sinr=-20.4281 dB | capacity=2.602787e+05 bps
 T=9, R=2 | distance=81.0100 m | fspl=78.2168 dB | sinr=-16.0507 dB | capacity=7.076202e+05 bps
 T=10, R=13 | distance=42.5961 m | fspl=72.6334 dB | sinr=-16.4285 dB | capacity=6.493250e+05 bps
-T=14, R=16 | distance=35.6562 m | fspl=71.0887 dB | sinr=-12.8018 dB | capacity=1.475266e+06 bps
-T=15, R=12 | distance=77.3602 m | fspl=77.8163 dB | sinr=-18.8468 dB | capacity=3.738633e+05 bps
+T=14, R=3 | distance=61.5532 m | fspl=75.8310 dB | sinr=-19.7625 dB | capacity=3.031621e+05 bps
+T=15, R=16 | distance=72.9367 m | fspl=77.3049 dB | sinr=-19.1881 dB | capacity=3.457741e+05 bps
+T=17, R=5 | distance=74.3878 m | fspl=77.4760 dB | sinr=-16.9199 dB | capacity=5.805541e+05 bps
+----------------------------------------------------------------------------------------------------
+Trial 5: T=8, R=12
+T=1, R=0 | distance=27.1995 m | fspl=68.7372 dB | sinr=-12.4989 dB | capacity=1.578967e+06 bps
+T=4, R=19 | distance=24.0643 m | fspl=67.6735 dB | sinr=-11.9850 dB | capacity=1.771363e+06 bps
+T=8, R=5 | distance=88.2302 m | fspl=78.9583 dB | sinr=-18.4276 dB | capacity=4.114750e+05 bps
+T=9, R=12 | distance=43.9792 m | fspl=72.9109 dB | sinr=-13.8211 dB | capacity=1.172843e+06 bps
+T=10, R=6 | distance=48.1966 m | fspl=73.7063 dB | sinr=-16.3645 dB | capacity=6.588487e+05 bps
+T=14, R=11 | distance=84.3002 m | fspl=78.5626 dB | sinr=-18.4677 dB | capacity=4.077247e+05 bps
+T=15, R=16 | distance=72.9367 m | fspl=77.3049 dB | sinr=-19.1881 dB | capacity=3.457741e+05 bps
+T=17, R=7 | distance=4.5932 m | fspl=53.2883 dB | sinr=5.1256 dB | capacity=4.178339e+07 bps
+----------------------------------------------------------------------------------------------------
+Trial 6: T=8, R=12
+T=1, R=0 | distance=27.1995 m | fspl=68.7372 dB | sinr=-12.4989 dB | capacity=1.578967e+06 bps
+T=4, R=11 | distance=95.1821 m | fspl=79.6171 dB | sinr=-19.5355 dB | capacity=3.193380e+05 bps
+T=8, R=16 | distance=38.2571 m | fspl=71.7002 dB | sinr=-13.4432 dB | capacity=1.277138e+06 bps
+T=9, R=19 | distance=60.1932 m | fspl=75.6369 dB | sinr=-20.1735 dB | capacity=2.759135e+05 bps
+T=10, R=5 | distance=69.0978 m | fspl=76.8353 dB | sinr=-16.2650 dB | capacity=6.739352e+05 bps
+T=14, R=18 | distance=20.8771 m | fspl=66.4394 dB | sinr=-18.5331 dB | capacity=4.016699e+05 bps
+T=15, R=7 | distance=79.9257 m | fspl=78.0997 dB | sinr=-25.9639 dB | capacity=7.299041e+04 bps
+T=17, R=12 | distance=30.8871 m | fspl=69.8415 dB | sinr=-10.5625 dB | capacity=2.429629e+06 bps
+----------------------------------------------------------------------------------------------------
+Trial 7: T=8, R=12
+T=1, R=6 | distance=24.8664 m | fspl=67.9583 dB | sinr=-10.3307 dB | capacity=2.557093e+06 bps
+T=4, R=16 | distance=21.3256 m | fspl=66.6240 dB | sinr=-7.9075 dB | capacity=4.329722e+06 bps
+T=8, R=2 | distance=102.1452 m | fspl=80.2304 dB | sinr=-18.1041 dB | capacity=4.430545e+05 bps
+T=9, R=7 | distance=55.7838 m | fspl=74.9762 dB | sinr=-22.8287 dB | capacity=1.500384e+05 bps
+T=10, R=13 | distance=42.5961 m | fspl=72.6334 dB | sinr=-16.4285 dB | capacity=6.493250e+05 bps
+T=14, R=5 | distance=32.5996 m | fspl=70.3102 dB | sinr=-9.3659 dB | capacity=3.159517e+06 bps
+T=15, R=0 | distance=52.9437 m | fspl=74.5223 dB | sinr=-18.4602 dB | capacity=4.084199e+05 bps
+T=17, R=12 | distance=30.8871 m | fspl=69.8415 dB | sinr=-10.5625 dB | capacity=2.429629e+06 bps
+----------------------------------------------------------------------------------------------------
+Trial 8: T=8, R=12
+T=1, R=13 | distance=76.2046 m | fspl=77.6856 dB | sinr=-21.5481 dB | capacity=2.013152e+05 bps
+T=4, R=6 | distance=63.6131 m | fspl=76.1169 dB | sinr=-18.8176 dB | capacity=3.763618e+05 bps
+T=8, R=0 | distance=43.4505 m | fspl=72.8059 dB | sinr=-16.7137 dB | capacity=6.084805e+05 bps
+T=9, R=12 | distance=43.9792 m | fspl=72.9109 dB | sinr=-13.8211 dB | capacity=1.172843e+06 bps
+T=10, R=7 | distance=33.9443 m | fspl=70.6613 dB | sinr=-18.4752 dB | capacity=4.070198e+05 bps
+T=14, R=18 | distance=20.8771 m | fspl=66.4394 dB | sinr=-18.5331 dB | capacity=4.016699e+05 bps
+T=15, R=16 | distance=72.9367 m | fspl=77.3049 dB | sinr=-19.1881 dB | capacity=3.457741e+05 bps
 T=17, R=11 | distance=86.3867 m | fspl=78.7749 dB | sinr=-18.6830 dB | capacity=3.881358e+05 bps
+----------------------------------------------------------------------------------------------------
+Trial 9: T=8, R=12
+T=1, R=2 | distance=81.3489 m | fspl=78.2530 dB | sinr=-16.0878 dB | capacity=7.016641e+05 bps
+T=4, R=13 | distance=52.9116 m | fspl=74.5170 dB | sinr=-18.3467 dB | capacity=4.191533e+05 bps
+T=8, R=3 | distance=75.1203 m | fspl=77.5611 dB | sinr=-21.5076 dB | capacity=2.031937e+05 bps
+T=9, R=5 | distance=54.3857 m | fspl=74.7557 dB | sinr=-14.1220 dB | capacity=1.095810e+06 bps
+T=10, R=7 | distance=33.9443 m | fspl=70.6613 dB | sinr=-18.4752 dB | capacity=4.070198e+05 bps
+T=14, R=18 | distance=20.8771 m | fspl=66.4394 dB | sinr=-18.5331 dB | capacity=4.016699e+05 bps
+T=15, R=6 | distance=17.6443 m | fspl=64.9781 dB | sinr=-6.9344 dB | capacity=5.322289e+06 bps
+T=17, R=16 | distance=23.1117 m | fspl=67.3226 dB | sinr=-8.7094 dB | capacity=3.643798e+06 bps
+----------------------------------------------------------------------------------------------------
+Trial 10: T=8, R=12
+T=1, R=6 | distance=24.8664 m | fspl=67.9583 dB | sinr=-10.3307 dB | capacity=2.557093e+06 bps
+T=4, R=5 | distance=53.4633 m | fspl=74.6071 dB | sinr=-13.9675 dB | capacity=1.134709e+06 bps
+T=8, R=11 | distance=92.7844 m | fspl=79.3955 dB | sinr=-19.3114 dB | capacity=3.361530e+05 bps
+T=9, R=16 | distance=56.5718 m | fspl=75.0980 dB | sinr=-16.9463 dB | capacity=5.770600e+05 bps
+T=10, R=19 | distance=61.7703 m | fspl=75.8616 dB | sinr=-20.4003 dB | capacity=2.619409e+05 bps
+T=14, R=7 | distance=53.9774 m | fspl=74.6902 dB | sinr=-22.5413 dB | capacity=1.602770e+05 bps
+T=15, R=3 | distance=18.2183 m | fspl=65.2562 dB | sinr=-8.6815 dB | capacity=3.665867e+06 bps
+T=17, R=12 | distance=30.8871 m | fspl=69.8415 dB | sinr=-10.5625 dB | capacity=2.429629e+06 bps
+----------------------------------------------------------------------------------------------------
+Trial 11: T=8, R=12
+T=1, R=11 | distance=22.5579 m | fspl=67.1120 dB | sinr=-6.1312 dB | capacity=6.293090e+06 bps
+T=4, R=7 | distance=38.6276 m | fspl=71.7840 dB | sinr=-19.6119 dB | capacity=3.138004e+05 bps
+T=8, R=3 | distance=75.1203 m | fspl=77.5611 dB | sinr=-21.5076 dB | capacity=2.031937e+05 bps
+T=9, R=18 | distance=71.4928 m | fspl=77.1312 dB | sinr=-29.2803 dB | capacity=3.403469e+04 bps
+T=10, R=6 | distance=48.1966 m | fspl=73.7063 dB | sinr=-16.3645 dB | capacity=6.588487e+05 bps
+T=14, R=19 | distance=7.3816 m | fspl=57.4090 dB | sinr=2.3642 dB | capacity=2.890958e+07 bps
+T=15, R=16 | distance=72.9367 m | fspl=77.3049 dB | sinr=-19.1881 dB | capacity=3.457741e+05 bps
+T=17, R=2 | distance=87.1173 m | fspl=78.8481 dB | sinr=-16.6966 dB | capacity=6.108618e+05 bps
 ----------------------------------------------------------------------------------------------------
 Trial 12: T=8, R=12
 T=1, R=18 | distance=76.1645 m | fspl=77.6811 dB | sinr=-29.8307 dB | capacity=2.998543e+04 bps
-T=4, R=0 | distance=64.5945 m | fspl=76.2499 dB | sinr=-20.2081 dB | capacity=2.737364e+05 bps
-T=8, R=19 | distance=68.8915 m | fspl=76.8093 dB | sinr=-21.3558 dB | capacity=2.103995e+05 bps
-T=9, R=11 | distance=29.8040 m | fspl=69.5315 dB | sinr=-8.9808 dB | capacity=3.435665e+06 bps
-T=10, R=7 | distance=33.9443 m | fspl=70.6613 dB | sinr=-18.4752 dB | capacity=4.070198e+05 bps
-T=14, R=5 | distance=32.5996 m | fspl=70.3102 dB | sinr=-9.3659 dB | capacity=3.159517e+06 bps
-T=15, R=13 | distance=96.4645 m | fspl=79.7333 dB | sinr=-23.6073 dB | capacity=1.254682e+05 bps
-T=17, R=12 | distance=30.8871 m | fspl=69.8415 dB | sinr=-10.5625 dB | capacity=2.429629e+06 bps
+T=4, R=5 | distance=53.4633 m | fspl=74.6071 dB | sinr=-13.9675 dB | capacity=1.134709e+06 bps
+T=8, R=7 | distance=19.7650 m | fspl=65.9639 dB | sinr=-13.6558 dB | capacity=1.217379e+06 bps
+T=9, R=12 | distance=43.9792 m | fspl=72.9109 dB | sinr=-13.8211 dB | capacity=1.172843e+06 bps
+T=10, R=19 | distance=61.7703 m | fspl=75.8616 dB | sinr=-20.4003 dB | capacity=2.619409e+05 bps
+T=14, R=16 | distance=35.6562 m | fspl=71.0887 dB | sinr=-12.8018 dB | capacity=1.475266e+06 bps
+T=15, R=11 | distance=23.7867 m | fspl=67.5727 dB | sinr=-6.6972 dB | capacity=5.593835e+06 bps
+T=17, R=6 | distance=65.6841 m | fspl=76.3952 dB | sinr=-19.0994 dB | capacity=3.528597e+05 bps
 ----------------------------------------------------------------------------------------------------
 Trial 13: T=8, R=12
-T=1, R=0 | distance=27.1995 m | fspl=68.7372 dB | sinr=-12.4989 dB | capacity=1.578967e+06 bps
+T=1, R=13 | distance=76.2046 m | fspl=77.6856 dB | sinr=-21.5481 dB | capacity=2.013152e+05 bps
 T=4, R=11 | distance=95.1821 m | fspl=79.6171 dB | sinr=-19.5355 dB | capacity=3.193380e+05 bps
-T=8, R=18 | distance=59.1600 m | fspl=75.4866 dB | sinr=-27.6332 dB | capacity=4.971741e+04 bps
-T=9, R=12 | distance=43.9792 m | fspl=72.9109 dB | sinr=-13.8211 dB | capacity=1.172843e+06 bps
-T=10, R=3 | distance=43.1549 m | fspl=72.7466 dB | sinr=-16.6303 dB | capacity=6.201469e+05 bps
+T=8, R=16 | distance=38.2571 m | fspl=71.7002 dB | sinr=-13.4432 dB | capacity=1.277138e+06 bps
+T=9, R=3 | distance=16.8108 m | fspl=64.5578 dB | sinr=-7.8792 dB | capacity=4.355992e+06 bps
+T=10, R=0 | distance=8.5832 m | fspl=58.7190 dB | sinr=0.6049 dB | capacity=2.207925e+07 bps
 T=14, R=2 | distance=29.8685 m | fspl=69.5503 dB | sinr=-6.6383 dB | capacity=5.663161e+06 bps
-T=15, R=5 | distance=37.6177 m | fspl=71.5538 dB | sinr=-10.7329 dB | capacity=2.339861e+06 bps
-T=17, R=16 | distance=23.1117 m | fspl=67.3226 dB | sinr=-8.7094 dB | capacity=3.643798e+06 bps
+T=15, R=6 | distance=17.6443 m | fspl=64.9781 dB | sinr=-6.9344 dB | capacity=5.322289e+06 bps
+T=17, R=19 | distance=53.8151 m | fspl=74.6641 dB | sinr=-19.1902 dB | capacity=3.456075e+05 bps
 ----------------------------------------------------------------------------------------------------
 Trial 14: T=8, R=12
-T=1, R=19 | distance=63.2289 m | fspl=76.0643 dB | sinr=-20.6048 dB | capacity=2.499430e+05 bps
-T=4, R=12 | distance=69.8754 m | fspl=76.9325 dB | sinr=-17.9501 dB | capacity=4.589207e+05 bps
-T=8, R=7 | distance=19.7650 m | fspl=65.9639 dB | sinr=-13.6558 dB | capacity=1.217379e+06 bps
-T=9, R=18 | distance=71.4928 m | fspl=77.1312 dB | sinr=-29.2803 dB | capacity=3.403469e+04 bps
-T=10, R=3 | distance=43.1549 m | fspl=72.7466 dB | sinr=-16.6303 dB | capacity=6.201469e+05 bps
-T=14, R=6 | distance=50.9121 m | fspl=74.1824 dB | sinr=-16.8510 dB | capacity=5.897379e+05 bps
-T=15, R=5 | distance=37.6177 m | fspl=71.5538 dB | sinr=-10.7329 dB | capacity=2.339861e+06 bps
-T=17, R=11 | distance=86.3867 m | fspl=78.7749 dB | sinr=-18.6830 dB | capacity=3.881358e+05 bps
+T=1, R=12 | distance=50.9089 m | fspl=74.1819 dB | sinr=-15.1375 dB | capacity=8.707376e+05 bps
+T=4, R=13 | distance=52.9116 m | fspl=74.5170 dB | sinr=-18.3467 dB | capacity=4.191533e+05 bps
+T=8, R=2 | distance=102.1452 m | fspl=80.2304 dB | sinr=-18.1041 dB | capacity=4.430545e+05 bps
+T=9, R=3 | distance=16.8108 m | fspl=64.5578 dB | sinr=-7.8792 dB | capacity=4.355992e+06 bps
+T=10, R=16 | distance=43.2556 m | fspl=72.7668 dB | sinr=-14.5524 dB | capacity=9.941717e+05 bps
+T=14, R=18 | distance=20.8771 m | fspl=66.4394 dB | sinr=-18.5331 dB | capacity=4.016699e+05 bps
+T=15, R=19 | distance=59.7323 m | fspl=75.5702 dB | sinr=-20.1061 dB | capacity=2.802090e+05 bps
+T=17, R=5 | distance=74.3878 m | fspl=77.4760 dB | sinr=-16.9199 dB | capacity=5.805541e+05 bps
 ----------------------------------------------------------------------------------------------------
 Trial 15: T=8, R=12
-T=1, R=18 | distance=76.1645 m | fspl=77.6811 dB | sinr=-29.8307 dB | capacity=2.998543e+04 bps
-T=4, R=6 | distance=63.6131 m | fspl=76.1169 dB | sinr=-18.8176 dB | capacity=3.763618e+05 bps
+T=1, R=13 | distance=76.2046 m | fspl=77.6856 dB | sinr=-21.5481 dB | capacity=2.013152e+05 bps
+T=4, R=16 | distance=21.3256 m | fspl=66.6240 dB | sinr=-7.9075 dB | capacity=4.329722e+06 bps
 T=8, R=0 | distance=43.4505 m | fspl=72.8059 dB | sinr=-16.7137 dB | capacity=6.084805e+05 bps
-T=9, R=13 | distance=68.9809 m | fspl=76.8206 dB | sinr=-20.6764 dB | capacity=2.458760e+05 bps
+T=9, R=19 | distance=60.1932 m | fspl=75.6369 dB | sinr=-20.1735 dB | capacity=2.759135e+05 bps
 T=10, R=12 | distance=16.1170 m | fspl=64.1917 dB | sinr=-3.7504 dB | capacity=1.015143e+07 bps
-T=14, R=2 | distance=29.8685 m | fspl=69.5503 dB | sinr=-6.6383 dB | capacity=5.663161e+06 bps
+T=14, R=7 | distance=53.9774 m | fspl=74.6902 dB | sinr=-22.5413 dB | capacity=1.602770e+05 bps
 T=15, R=11 | distance=23.7867 m | fspl=67.5727 dB | sinr=-6.6972 dB | capacity=5.593835e+06 bps
-T=17, R=3 | distance=66.4036 m | fspl=76.4898 dB | sinr=-20.4277 dB | capacity=2.602975e+05 bps
+T=17, R=5 | distance=74.3878 m | fspl=77.4760 dB | sinr=-16.9199 dB | capacity=5.805541e+05 bps
 ----------------------------------------------------------------------------------------------------
 Trial 16: T=8, R=12
-T=1, R=5 | distance=53.9047 m | fspl=74.6785 dB | sinr=-14.0418 dB | capacity=1.115840e+06 bps
-T=4, R=7 | distance=38.6276 m | fspl=71.7840 dB | sinr=-19.6119 dB | capacity=3.138004e+05 bps
-T=8, R=6 | distance=76.4178 m | fspl=77.7099 dB | sinr=-20.4281 dB | capacity=2.602787e+05 bps
-T=9, R=3 | distance=16.8108 m | fspl=64.5578 dB | sinr=-7.8792 dB | capacity=4.355992e+06 bps
-T=10, R=11 | distance=57.9040 m | fspl=75.3002 dB | sinr=-15.1355 dB | capacity=8.711270e+05 bps
-T=14, R=12 | distance=79.2488 m | fspl=78.0259 dB | sinr=-19.0589 dB | capacity=3.561468e+05 bps
+T=1, R=11 | distance=22.5579 m | fspl=67.1120 dB | sinr=-6.1312 dB | capacity=6.293090e+06 bps
+T=4, R=3 | distance=71.6521 m | fspl=77.1506 dB | sinr=-21.0940 dB | capacity=2.234185e+05 bps
+T=8, R=5 | distance=88.2302 m | fspl=78.9583 dB | sinr=-18.4276 dB | capacity=4.114750e+05 bps
+T=9, R=6 | distance=26.5119 m | fspl=68.5148 dB | sinr=-10.9354 dB | capacity=2.237260e+06 bps
+T=10, R=7 | distance=33.9443 m | fspl=70.6613 dB | sinr=-18.4752 dB | capacity=4.070198e+05 bps
+T=14, R=2 | distance=29.8685 m | fspl=69.5503 dB | sinr=-6.6383 dB | capacity=5.663161e+06 bps
 T=15, R=13 | distance=96.4645 m | fspl=79.7333 dB | sinr=-23.6073 dB | capacity=1.254682e+05 bps
-T=17, R=16 | distance=23.1117 m | fspl=67.3226 dB | sinr=-8.7094 dB | capacity=3.643798e+06 bps
+T=17, R=19 | distance=53.8151 m | fspl=74.6641 dB | sinr=-19.1902 dB | capacity=3.456075e+05 bps
 ----------------------------------------------------------------------------------------------------
 Trial 17: T=8, R=12
 T=1, R=19 | distance=63.2289 m | fspl=76.0643 dB | sinr=-20.6048 dB | capacity=2.499430e+05 bps
 T=4, R=7 | distance=38.6276 m | fspl=71.7840 dB | sinr=-19.6119 dB | capacity=3.138004e+05 bps
-T=8, R=18 | distance=59.1600 m | fspl=75.4866 dB | sinr=-27.6332 dB | capacity=4.971741e+04 bps
-T=9, R=5 | distance=54.3857 m | fspl=74.7557 dB | sinr=-14.1220 dB | capacity=1.095810e+06 bps
-T=10, R=16 | distance=43.2556 m | fspl=72.7668 dB | sinr=-14.5524 dB | capacity=9.941717e+05 bps
-T=14, R=3 | distance=61.5532 m | fspl=75.8310 dB | sinr=-19.7625 dB | capacity=3.031621e+05 bps
-T=15, R=11 | distance=23.7867 m | fspl=67.5727 dB | sinr=-6.6972 dB | capacity=5.593835e+06 bps
-T=17, R=0 | distance=39.3527 m | fspl=71.9455 dB | sinr=-15.8330 dB | capacity=7.435324e+05 bps
+T=8, R=3 | distance=75.1203 m | fspl=77.5611 dB | sinr=-21.5076 dB | capacity=2.031937e+05 bps
+T=9, R=2 | distance=81.0100 m | fspl=78.2168 dB | sinr=-16.0507 dB | capacity=7.076202e+05 bps
+T=10, R=13 | distance=42.5961 m | fspl=72.6334 dB | sinr=-16.4285 dB | capacity=6.493250e+05 bps
+T=14, R=6 | distance=50.9121 m | fspl=74.1824 dB | sinr=-16.8510 dB | capacity=5.897379e+05 bps
+T=15, R=12 | distance=77.3602 m | fspl=77.8163 dB | sinr=-18.8468 dB | capacity=3.738633e+05 bps
+T=17, R=18 | distance=44.4163 m | fspl=72.9969 dB | sinr=-25.1377 dB | capacity=8.826103e+04 bps
 ----------------------------------------------------------------------------------------------------
 Trial 18: T=8, R=12
-T=1, R=7 | distance=62.7215 m | fspl=75.9943 dB | sinr=-23.8516 dB | capacity=1.186174e+05 bps
-T=4, R=2 | distance=52.6332 m | fspl=74.4712 dB | sinr=-12.1549 dB | capacity=1.705354e+06 bps
-T=8, R=3 | distance=75.1203 m | fspl=77.5611 dB | sinr=-21.5076 dB | capacity=2.031937e+05 bps
-T=9, R=18 | distance=71.4928 m | fspl=77.1312 dB | sinr=-29.2803 dB | capacity=3.403469e+04 bps
-T=10, R=11 | distance=57.9040 m | fspl=75.3002 dB | sinr=-15.1355 dB | capacity=8.711270e+05 bps
-T=14, R=16 | distance=35.6562 m | fspl=71.0887 dB | sinr=-12.8018 dB | capacity=1.475266e+06 bps
-T=15, R=13 | distance=96.4645 m | fspl=79.7333 dB | sinr=-23.6073 dB | capacity=1.254682e+05 bps
-T=17, R=12 | distance=30.8871 m | fspl=69.8415 dB | sinr=-10.5625 dB | capacity=2.429629e+06 bps
+T=1, R=0 | distance=27.1995 m | fspl=68.7372 dB | sinr=-12.4989 dB | capacity=1.578967e+06 bps
+T=4, R=13 | distance=52.9116 m | fspl=74.5170 dB | sinr=-18.3467 dB | capacity=4.191533e+05 bps
+T=8, R=11 | distance=92.7844 m | fspl=79.3955 dB | sinr=-19.3114 dB | capacity=3.361530e+05 bps
+T=9, R=16 | distance=56.5718 m | fspl=75.0980 dB | sinr=-16.9463 dB | capacity=5.770600e+05 bps
+T=10, R=3 | distance=43.1549 m | fspl=72.7466 dB | sinr=-16.6303 dB | capacity=6.201469e+05 bps
+T=14, R=2 | distance=29.8685 m | fspl=69.5503 dB | sinr=-6.6383 dB | capacity=5.663161e+06 bps
+T=15, R=7 | distance=79.9257 m | fspl=78.0997 dB | sinr=-25.9639 dB | capacity=7.299041e+04 bps
+T=17, R=18 | distance=44.4163 m | fspl=72.9969 dB | sinr=-25.1377 dB | capacity=8.826103e+04 bps
 ----------------------------------------------------------------------------------------------------
 Trial 19: T=8, R=12
-T=1, R=5 | distance=53.9047 m | fspl=74.6785 dB | sinr=-14.0418 dB | capacity=1.115840e+06 bps
-T=4, R=3 | distance=71.6521 m | fspl=77.1506 dB | sinr=-21.0940 dB | capacity=2.234185e+05 bps
-T=8, R=18 | distance=59.1600 m | fspl=75.4866 dB | sinr=-27.6332 dB | capacity=4.971741e+04 bps
-T=9, R=13 | distance=68.9809 m | fspl=76.8206 dB | sinr=-20.6764 dB | capacity=2.458760e+05 bps
-T=10, R=7 | distance=33.9443 m | fspl=70.6613 dB | sinr=-18.4752 dB | capacity=4.070198e+05 bps
-T=14, R=19 | distance=7.3816 m | fspl=57.4090 dB | sinr=2.3642 dB | capacity=2.890958e+07 bps
-T=15, R=2 | distance=65.0635 m | fspl=76.3128 dB | sinr=-14.0869 dB | capacity=1.104519e+06 bps
-T=17, R=16 | distance=23.1117 m | fspl=67.3226 dB | sinr=-8.7094 dB | capacity=3.643798e+06 bps
+T=1, R=16 | distance=62.5073 m | fspl=75.9646 dB | sinr=-17.8288 dB | capacity=4.718138e+05 bps
+T=4, R=18 | distance=2.5383 m | fspl=48.1370 dB | sinr=11.5902 dB | capacity=7.893815e+07 bps
+T=8, R=2 | distance=102.1452 m | fspl=80.2304 dB | sinr=-18.1041 dB | capacity=4.430545e+05 bps
+T=9, R=5 | distance=54.3857 m | fspl=74.7557 dB | sinr=-14.1220 dB | capacity=1.095810e+06 bps
+T=10, R=12 | distance=16.1170 m | fspl=64.1917 dB | sinr=-3.7504 dB | capacity=1.015143e+07 bps
+T=14, R=3 | distance=61.5532 m | fspl=75.8310 dB | sinr=-19.7625 dB | capacity=3.031621e+05 bps
+T=15, R=7 | distance=79.9257 m | fspl=78.0997 dB | sinr=-25.9639 dB | capacity=7.299041e+04 bps
+T=17, R=13 | distance=14.5695 m | fspl=63.3149 dB | sinr=-6.2914 dB | capacity=6.087548e+06 bps
 ----------------------------------------------------------------------------------------------------
 Trial 20: T=8, R=12
-T=1, R=2 | distance=81.3489 m | fspl=78.2530 dB | sinr=-16.0878 dB | capacity=7.016641e+05 bps
-T=4, R=6 | distance=63.6131 m | fspl=76.1169 dB | sinr=-18.8176 dB | capacity=3.763618e+05 bps
-T=8, R=19 | distance=68.8915 m | fspl=76.8093 dB | sinr=-21.3558 dB | capacity=2.103995e+05 bps
-T=9, R=3 | distance=16.8108 m | fspl=64.5578 dB | sinr=-7.8792 dB | capacity=4.355992e+06 bps
-T=10, R=13 | distance=42.5961 m | fspl=72.6334 dB | sinr=-16.4285 dB | capacity=6.493250e+05 bps
-T=14, R=12 | distance=79.2488 m | fspl=78.0259 dB | sinr=-19.0589 dB | capacity=3.561468e+05 bps
-T=15, R=0 | distance=52.9437 m | fspl=74.5223 dB | sinr=-18.4602 dB | capacity=4.084199e+05 bps
+T=1, R=13 | distance=76.2046 m | fspl=77.6856 dB | sinr=-21.5481 dB | capacity=2.013152e+05 bps
+T=4, R=19 | distance=24.0643 m | fspl=67.6735 dB | sinr=-11.9850 dB | capacity=1.771363e+06 bps
+T=8, R=3 | distance=75.1203 m | fspl=77.5611 dB | sinr=-21.5076 dB | capacity=2.031937e+05 bps
+T=9, R=6 | distance=26.5119 m | fspl=68.5148 dB | sinr=-10.9354 dB | capacity=2.237260e+06 bps
+T=10, R=2 | distance=90.9141 m | fspl=79.2186 dB | sinr=-17.0747 dB | capacity=5.604163e+05 bps
+T=14, R=11 | distance=84.3002 m | fspl=78.5626 dB | sinr=-18.4677 dB | capacity=4.077247e+05 bps
+T=15, R=12 | distance=77.3602 m | fspl=77.8163 dB | sinr=-18.8468 dB | capacity=3.738633e+05 bps
 T=17, R=18 | distance=44.4163 m | fspl=72.9969 dB | sinr=-25.1377 dB | capacity=8.826103e+04 bps
 ----------------------------------------------------------------------------------------------------
 Trial 21: T=8, R=12
-T=1, R=2 | distance=81.3489 m | fspl=78.2530 dB | sinr=-16.0878 dB | capacity=7.016641e+05 bps
-T=4, R=13 | distance=52.9116 m | fspl=74.5170 dB | sinr=-18.3467 dB | capacity=4.191533e+05 bps
+T=1, R=19 | distance=63.2289 m | fspl=76.0643 dB | sinr=-20.6048 dB | capacity=2.499430e+05 bps
+T=4, R=0 | distance=64.5945 m | fspl=76.2499 dB | sinr=-20.2081 dB | capacity=2.737364e+05 bps
 T=8, R=11 | distance=92.7844 m | fspl=79.3955 dB | sinr=-19.3114 dB | capacity=3.361530e+05 bps
-T=9, R=19 | distance=60.1932 m | fspl=75.6369 dB | sinr=-20.1735 dB | capacity=2.759135e+05 bps
+T=9, R=6 | distance=26.5119 m | fspl=68.5148 dB | sinr=-10.9354 dB | capacity=2.237260e+06 bps
 T=10, R=16 | distance=43.2556 m | fspl=72.7668 dB | sinr=-14.5524 dB | capacity=9.941717e+05 bps
-T=14, R=5 | distance=32.5996 m | fspl=70.3102 dB | sinr=-9.3659 dB | capacity=3.159517e+06 bps
-T=15, R=0 | distance=52.9437 m | fspl=74.5223 dB | sinr=-18.4602 dB | capacity=4.084199e+05 bps
-T=17, R=3 | distance=66.4036 m | fspl=76.4898 dB | sinr=-20.4277 dB | capacity=2.602975e+05 bps
+T=14, R=13 | distance=71.1511 m | fspl=77.0896 dB | sinr=-20.9477 dB | capacity=2.310463e+05 bps
+T=15, R=5 | distance=37.6177 m | fspl=71.5538 dB | sinr=-10.7329 dB | capacity=2.339861e+06 bps
+T=17, R=7 | distance=4.5932 m | fspl=53.2883 dB | sinr=5.1256 dB | capacity=4.178339e+07 bps
 ----------------------------------------------------------------------------------------------------
 Trial 22: T=8, R=12
-T=1, R=12 | distance=50.9089 m | fspl=74.1819 dB | sinr=-15.1375 dB | capacity=8.707376e+05 bps
-T=4, R=6 | distance=63.6131 m | fspl=76.1169 dB | sinr=-18.8176 dB | capacity=3.763618e+05 bps
-T=8, R=16 | distance=38.2571 m | fspl=71.7002 dB | sinr=-13.4432 dB | capacity=1.277138e+06 bps
-T=9, R=3 | distance=16.8108 m | fspl=64.5578 dB | sinr=-7.8792 dB | capacity=4.355992e+06 bps
-T=10, R=11 | distance=57.9040 m | fspl=75.3002 dB | sinr=-15.1355 dB | capacity=8.711270e+05 bps
-T=14, R=13 | distance=71.1511 m | fspl=77.0896 dB | sinr=-20.9477 dB | capacity=2.310463e+05 bps
-T=15, R=18 | distance=78.7338 m | fspl=77.9692 dB | sinr=-30.1191 dB | capacity=2.805946e+04 bps
-T=17, R=19 | distance=53.8151 m | fspl=74.6641 dB | sinr=-19.1902 dB | capacity=3.456075e+05 bps
-----------------------------------------------------------------------------------------------------
-Trial 23: T=8, R=12
-T=1, R=18 | distance=76.1645 m | fspl=77.6811 dB | sinr=-29.8307 dB | capacity=2.998543e+04 bps
-T=4, R=12 | distance=69.8754 m | fspl=76.9325 dB | sinr=-17.9501 dB | capacity=4.589207e+05 bps
-T=8, R=19 | distance=68.8915 m | fspl=76.8093 dB | sinr=-21.3558 dB | capacity=2.103995e+05 bps
-T=9, R=3 | distance=16.8108 m | fspl=64.5578 dB | sinr=-7.8792 dB | capacity=4.355992e+06 bps
-T=10, R=16 | distance=43.2556 m | fspl=72.7668 dB | sinr=-14.5524 dB | capacity=9.941717e+05 bps
-T=14, R=13 | distance=71.1511 m | fspl=77.0896 dB | sinr=-20.9477 dB | capacity=2.310463e+05 bps
-T=15, R=0 | distance=52.9437 m | fspl=74.5223 dB | sinr=-18.4602 dB | capacity=4.084199e+05 bps
+T=1, R=16 | distance=62.5073 m | fspl=75.9646 dB | sinr=-17.8288 dB | capacity=4.718138e+05 bps
+T=4, R=18 | distance=2.5383 m | fspl=48.1370 dB | sinr=11.5902 dB | capacity=7.893815e+07 bps
+T=8, R=5 | distance=88.2302 m | fspl=78.9583 dB | sinr=-18.4276 dB | capacity=4.114750e+05 bps
+T=9, R=0 | distance=20.0119 m | fspl=66.0717 dB | sinr=-9.6214 dB | capacity=2.988019e+06 bps
+T=10, R=6 | distance=48.1966 m | fspl=73.7063 dB | sinr=-16.3645 dB | capacity=6.588487e+05 bps
+T=14, R=3 | distance=61.5532 m | fspl=75.8310 dB | sinr=-19.7625 dB | capacity=3.031621e+05 bps
+T=15, R=11 | distance=23.7867 m | fspl=67.5727 dB | sinr=-6.6972 dB | capacity=5.593835e+06 bps
 T=17, R=2 | distance=87.1173 m | fspl=78.8481 dB | sinr=-16.6966 dB | capacity=6.108618e+05 bps
 ----------------------------------------------------------------------------------------------------
-Trial 24: T=8, R=12
-T=1, R=3 | distance=13.1777 m | fspl=62.4428 dB | sinr=-5.2958 dB | capacity=7.468092e+06 bps
-T=4, R=7 | distance=38.6276 m | fspl=71.7840 dB | sinr=-19.6119 dB | capacity=3.138004e+05 bps
-T=8, R=16 | distance=38.2571 m | fspl=71.7002 dB | sinr=-13.4432 dB | capacity=1.277138e+06 bps
-T=9, R=19 | distance=60.1932 m | fspl=75.6369 dB | sinr=-20.1735 dB | capacity=2.759135e+05 bps
-T=10, R=6 | distance=48.1966 m | fspl=73.7063 dB | sinr=-16.3645 dB | capacity=6.588487e+05 bps
-T=14, R=11 | distance=84.3002 m | fspl=78.5626 dB | sinr=-18.4677 dB | capacity=4.077247e+05 bps
-T=15, R=18 | distance=78.7338 m | fspl=77.9692 dB | sinr=-30.1191 dB | capacity=2.805946e+04 bps
-T=17, R=13 | distance=14.5695 m | fspl=63.3149 dB | sinr=-6.2914 dB | capacity=6.087548e+06 bps
+Trial 23: T=8, R=12
+T=1, R=19 | distance=63.2289 m | fspl=76.0643 dB | sinr=-20.6048 dB | capacity=2.499430e+05 bps
+T=4, R=2 | distance=52.6332 m | fspl=74.4712 dB | sinr=-12.1549 dB | capacity=1.705354e+06 bps
+T=8, R=3 | distance=75.1203 m | fspl=77.5611 dB | sinr=-21.5076 dB | capacity=2.031937e+05 bps
+T=9, R=0 | distance=20.0119 m | fspl=66.0717 dB | sinr=-9.6214 dB | capacity=2.988019e+06 bps
+T=10, R=16 | distance=43.2556 m | fspl=72.7668 dB | sinr=-14.5524 dB | capacity=9.941717e+05 bps
+T=14, R=7 | distance=53.9774 m | fspl=74.6902 dB | sinr=-22.5413 dB | capacity=1.602770e+05 bps
+T=15, R=13 | distance=96.4645 m | fspl=79.7333 dB | sinr=-23.6073 dB | capacity=1.254682e+05 bps
+T=17, R=18 | distance=44.4163 m | fspl=72.9969 dB | sinr=-25.1377 dB | capacity=8.826103e+04 bps
 ----------------------------------------------------------------------------------------------------
-Trial 25: T=8, R=12
-T=1, R=2 | distance=81.3489 m | fspl=78.2530 dB | sinr=-16.0878 dB | capacity=7.016641e+05 bps
-T=4, R=7 | distance=38.6276 m | fspl=71.7840 dB | sinr=-19.6119 dB | capacity=3.138004e+05 bps
-T=8, R=11 | distance=92.7844 m | fspl=79.3955 dB | sinr=-19.3114 dB | capacity=3.361530e+05 bps
+Trial 24: T=8, R=12
+T=1, R=7 | distance=62.7215 m | fspl=75.9943 dB | sinr=-23.8516 dB | capacity=1.186174e+05 bps
+T=4, R=5 | distance=53.4633 m | fspl=74.6071 dB | sinr=-13.9675 dB | capacity=1.134709e+06 bps
+T=8, R=12 | distance=25.9230 m | fspl=68.3197 dB | sinr=-8.8775 dB | capacity=3.513508e+06 bps
 T=9, R=16 | distance=56.5718 m | fspl=75.0980 dB | sinr=-16.9463 dB | capacity=5.770600e+05 bps
 T=10, R=3 | distance=43.1549 m | fspl=72.7466 dB | sinr=-16.6303 dB | capacity=6.201469e+05 bps
-T=14, R=5 | distance=32.5996 m | fspl=70.3102 dB | sinr=-9.3659 dB | capacity=3.159517e+06 bps
+T=14, R=11 | distance=84.3002 m | fspl=78.5626 dB | sinr=-18.4677 dB | capacity=4.077247e+05 bps
+T=15, R=13 | distance=96.4645 m | fspl=79.7333 dB | sinr=-23.6073 dB | capacity=1.254682e+05 bps
+T=17, R=6 | distance=65.6841 m | fspl=76.3952 dB | sinr=-19.0994 dB | capacity=3.528597e+05 bps
+----------------------------------------------------------------------------------------------------
+Trial 25: T=8, R=12
+T=1, R=19 | distance=63.2289 m | fspl=76.0643 dB | sinr=-20.6048 dB | capacity=2.499430e+05 bps
+T=4, R=13 | distance=52.9116 m | fspl=74.5170 dB | sinr=-18.3467 dB | capacity=4.191533e+05 bps
+T=8, R=7 | distance=19.7650 m | fspl=65.9639 dB | sinr=-13.6558 dB | capacity=1.217379e+06 bps
+T=9, R=5 | distance=54.3857 m | fspl=74.7557 dB | sinr=-14.1220 dB | capacity=1.095810e+06 bps
+T=10, R=6 | distance=48.1966 m | fspl=73.7063 dB | sinr=-16.3645 dB | capacity=6.588487e+05 bps
+T=14, R=3 | distance=61.5532 m | fspl=75.8310 dB | sinr=-19.7625 dB | capacity=3.031621e+05 bps
 T=15, R=0 | distance=52.9437 m | fspl=74.5223 dB | sinr=-18.4602 dB | capacity=4.084199e+05 bps
-T=17, R=19 | distance=53.8151 m | fspl=74.6641 dB | sinr=-19.1902 dB | capacity=3.456075e+05 bps
+T=17, R=16 | distance=23.1117 m | fspl=67.3226 dB | sinr=-8.7094 dB | capacity=3.643798e+06 bps
 ----------------------------------------------------------------------------------------------------
 Trial 26: T=8, R=12
 T=1, R=3 | distance=13.1777 m | fspl=62.4428 dB | sinr=-5.2958 dB | capacity=7.468092e+06 bps
-T=4, R=5 | distance=53.4633 m | fspl=74.6071 dB | sinr=-13.9675 dB | capacity=1.134709e+06 bps
-T=8, R=16 | distance=38.2571 m | fspl=71.7002 dB | sinr=-13.4432 dB | capacity=1.277138e+06 bps
-T=9, R=19 | distance=60.1932 m | fspl=75.6369 dB | sinr=-20.1735 dB | capacity=2.759135e+05 bps
-T=10, R=0 | distance=8.5832 m | fspl=58.7190 dB | sinr=0.6049 dB | capacity=2.207925e+07 bps
-T=14, R=13 | distance=71.1511 m | fspl=77.0896 dB | sinr=-20.9477 dB | capacity=2.310463e+05 bps
+T=4, R=13 | distance=52.9116 m | fspl=74.5170 dB | sinr=-18.3467 dB | capacity=4.191533e+05 bps
+T=8, R=7 | distance=19.7650 m | fspl=65.9639 dB | sinr=-13.6558 dB | capacity=1.217379e+06 bps
+T=9, R=0 | distance=20.0119 m | fspl=66.0717 dB | sinr=-9.6214 dB | capacity=2.988019e+06 bps
+T=10, R=19 | distance=61.7703 m | fspl=75.8616 dB | sinr=-20.4003 dB | capacity=2.619409e+05 bps
+T=14, R=2 | distance=29.8685 m | fspl=69.5503 dB | sinr=-6.6383 dB | capacity=5.663161e+06 bps
 T=15, R=11 | distance=23.7867 m | fspl=67.5727 dB | sinr=-6.6972 dB | capacity=5.593835e+06 bps
-T=17, R=7 | distance=4.5932 m | fspl=53.2883 dB | sinr=5.1256 dB | capacity=4.178339e+07 bps
+T=17, R=16 | distance=23.1117 m | fspl=67.3226 dB | sinr=-8.7094 dB | capacity=3.643798e+06 bps
 ----------------------------------------------------------------------------------------------------
 Trial 27: T=8, R=12
 T=1, R=6 | distance=24.8664 m | fspl=67.9583 dB | sinr=-10.3307 dB | capacity=2.557093e+06 bps
-T=4, R=18 | distance=2.5383 m | fspl=48.1370 dB | sinr=11.5902 dB | capacity=7.893815e+07 bps
-T=8, R=11 | distance=92.7844 m | fspl=79.3955 dB | sinr=-19.3114 dB | capacity=3.361530e+05 bps
-T=9, R=2 | distance=81.0100 m | fspl=78.2168 dB | sinr=-16.0507 dB | capacity=7.076202e+05 bps
-T=10, R=13 | distance=42.5961 m | fspl=72.6334 dB | sinr=-16.4285 dB | capacity=6.493250e+05 bps
-T=14, R=5 | distance=32.5996 m | fspl=70.3102 dB | sinr=-9.3659 dB | capacity=3.159517e+06 bps
-T=15, R=19 | distance=59.7323 m | fspl=75.5702 dB | sinr=-20.1061 dB | capacity=2.802090e+05 bps
-T=17, R=0 | distance=39.3527 m | fspl=71.9455 dB | sinr=-15.8330 dB | capacity=7.435324e+05 bps
+T=4, R=19 | distance=24.0643 m | fspl=67.6735 dB | sinr=-11.9850 dB | capacity=1.771363e+06 bps
+T=8, R=12 | distance=25.9230 m | fspl=68.3197 dB | sinr=-8.8775 dB | capacity=3.513508e+06 bps
+T=9, R=7 | distance=55.7838 m | fspl=74.9762 dB | sinr=-22.8287 dB | capacity=1.500384e+05 bps
+T=10, R=0 | distance=8.5832 m | fspl=58.7190 dB | sinr=0.6049 dB | capacity=2.207925e+07 bps
+T=14, R=3 | distance=61.5532 m | fspl=75.8310 dB | sinr=-19.7625 dB | capacity=3.031621e+05 bps
+T=15, R=18 | distance=78.7338 m | fspl=77.9692 dB | sinr=-30.1191 dB | capacity=2.805946e+04 bps
+T=17, R=5 | distance=74.3878 m | fspl=77.4760 dB | sinr=-16.9199 dB | capacity=5.805541e+05 bps
 ----------------------------------------------------------------------------------------------------
 Trial 28: T=8, R=12
-T=1, R=6 | distance=24.8664 m | fspl=67.9583 dB | sinr=-10.3307 dB | capacity=2.557093e+06 bps
-T=4, R=0 | distance=64.5945 m | fspl=76.2499 dB | sinr=-20.2081 dB | capacity=2.737364e+05 bps
-T=8, R=2 | distance=102.1452 m | fspl=80.2304 dB | sinr=-18.1041 dB | capacity=4.430545e+05 bps
+T=1, R=12 | distance=50.9089 m | fspl=74.1819 dB | sinr=-15.1375 dB | capacity=8.707376e+05 bps
+T=4, R=7 | distance=38.6276 m | fspl=71.7840 dB | sinr=-19.6119 dB | capacity=3.138004e+05 bps
+T=8, R=0 | distance=43.4505 m | fspl=72.8059 dB | sinr=-16.7137 dB | capacity=6.084805e+05 bps
 T=9, R=16 | distance=56.5718 m | fspl=75.0980 dB | sinr=-16.9463 dB | capacity=5.770600e+05 bps
-T=10, R=7 | distance=33.9443 m | fspl=70.6613 dB | sinr=-18.4752 dB | capacity=4.070198e+05 bps
-T=14, R=19 | distance=7.3816 m | fspl=57.4090 dB | sinr=2.3642 dB | capacity=2.890958e+07 bps
-T=15, R=11 | distance=23.7867 m | fspl=67.5727 dB | sinr=-6.6972 dB | capacity=5.593835e+06 bps
-T=17, R=3 | distance=66.4036 m | fspl=76.4898 dB | sinr=-20.4277 dB | capacity=2.602975e+05 bps
-----------------------------------------------------------------------------------------------------
-Trial 29: T=8, R=12
-T=1, R=19 | distance=63.2289 m | fspl=76.0643 dB | sinr=-20.6048 dB | capacity=2.499430e+05 bps
-T=4, R=0 | distance=64.5945 m | fspl=76.2499 dB | sinr=-20.2081 dB | capacity=2.737364e+05 bps
-T=8, R=16 | distance=38.2571 m | fspl=71.7002 dB | sinr=-13.4432 dB | capacity=1.277138e+06 bps
-T=9, R=12 | distance=43.9792 m | fspl=72.9109 dB | sinr=-13.8211 dB | capacity=1.172843e+06 bps
 T=10, R=3 | distance=43.1549 m | fspl=72.7466 dB | sinr=-16.6303 dB | capacity=6.201469e+05 bps
-T=14, R=5 | distance=32.5996 m | fspl=70.3102 dB | sinr=-9.3659 dB | capacity=3.159517e+06 bps
-T=15, R=6 | distance=17.6443 m | fspl=64.9781 dB | sinr=-6.9344 dB | capacity=5.322289e+06 bps
-T=17, R=18 | distance=44.4163 m | fspl=72.9969 dB | sinr=-25.1377 dB | capacity=8.826103e+04 bps
-----------------------------------------------------------------------------------------------------
-Trial 30: T=8, R=12
-T=1, R=19 | distance=63.2289 m | fspl=76.0643 dB | sinr=-20.6048 dB | capacity=2.499430e+05 bps
-T=4, R=16 | distance=21.3256 m | fspl=66.6240 dB | sinr=-7.9075 dB | capacity=4.329722e+06 bps
-T=8, R=7 | distance=19.7650 m | fspl=65.9639 dB | sinr=-13.6558 dB | capacity=1.217379e+06 bps
-T=9, R=2 | distance=81.0100 m | fspl=78.2168 dB | sinr=-16.0507 dB | capacity=7.076202e+05 bps
-T=10, R=12 | distance=16.1170 m | fspl=64.1917 dB | sinr=-3.7504 dB | capacity=1.015143e+07 bps
-T=14, R=3 | distance=61.5532 m | fspl=75.8310 dB | sinr=-19.7625 dB | capacity=3.031621e+05 bps
+T=14, R=6 | distance=50.9121 m | fspl=74.1824 dB | sinr=-16.8510 dB | capacity=5.897379e+05 bps
 T=15, R=13 | distance=96.4645 m | fspl=79.7333 dB | sinr=-23.6073 dB | capacity=1.254682e+05 bps
 T=17, R=11 | distance=86.3867 m | fspl=78.7749 dB | sinr=-18.6830 dB | capacity=3.881358e+05 bps
 ----------------------------------------------------------------------------------------------------
-Trial 31: T=8, R=12
-T=1, R=5 | distance=53.9047 m | fspl=74.6785 dB | sinr=-14.0418 dB | capacity=1.115840e+06 bps
-T=4, R=16 | distance=21.3256 m | fspl=66.6240 dB | sinr=-7.9075 dB | capacity=4.329722e+06 bps
-T=8, R=18 | distance=59.1600 m | fspl=75.4866 dB | sinr=-27.6332 dB | capacity=4.971741e+04 bps
-T=9, R=3 | distance=16.8108 m | fspl=64.5578 dB | sinr=-7.8792 dB | capacity=4.355992e+06 bps
-T=10, R=11 | distance=57.9040 m | fspl=75.3002 dB | sinr=-15.1355 dB | capacity=8.711270e+05 bps
+Trial 29: T=8, R=12
+T=1, R=11 | distance=22.5579 m | fspl=67.1120 dB | sinr=-6.1312 dB | capacity=6.293090e+06 bps
+T=4, R=12 | distance=69.8754 m | fspl=76.9325 dB | sinr=-17.9501 dB | capacity=4.589207e+05 bps
+T=8, R=16 | distance=38.2571 m | fspl=71.7002 dB | sinr=-13.4432 dB | capacity=1.277138e+06 bps
+T=9, R=6 | distance=26.5119 m | fspl=68.5148 dB | sinr=-10.9354 dB | capacity=2.237260e+06 bps
+T=10, R=3 | distance=43.1549 m | fspl=72.7466 dB | sinr=-16.6303 dB | capacity=6.201469e+05 bps
 T=14, R=7 | distance=53.9774 m | fspl=74.6902 dB | sinr=-22.5413 dB | capacity=1.602770e+05 bps
-T=15, R=6 | distance=17.6443 m | fspl=64.9781 dB | sinr=-6.9344 dB | capacity=5.322289e+06 bps
+T=15, R=19 | distance=59.7323 m | fspl=75.5702 dB | sinr=-20.1061 dB | capacity=2.802090e+05 bps
 T=17, R=13 | distance=14.5695 m | fspl=63.3149 dB | sinr=-6.2914 dB | capacity=6.087548e+06 bps
 ----------------------------------------------------------------------------------------------------
+Trial 30: T=8, R=12
+T=1, R=19 | distance=63.2289 m | fspl=76.0643 dB | sinr=-20.6048 dB | capacity=2.499430e+05 bps
+T=4, R=13 | distance=52.9116 m | fspl=74.5170 dB | sinr=-18.3467 dB | capacity=4.191533e+05 bps
+T=8, R=6 | distance=76.4178 m | fspl=77.7099 dB | sinr=-20.4281 dB | capacity=2.602787e+05 bps
+T=9, R=11 | distance=29.8040 m | fspl=69.5315 dB | sinr=-8.9808 dB | capacity=3.435665e+06 bps
+T=10, R=12 | distance=16.1170 m | fspl=64.1917 dB | sinr=-3.7504 dB | capacity=1.015143e+07 bps
+T=14, R=7 | distance=53.9774 m | fspl=74.6902 dB | sinr=-22.5413 dB | capacity=1.602770e+05 bps
+T=15, R=5 | distance=37.6177 m | fspl=71.5538 dB | sinr=-10.7329 dB | capacity=2.339861e+06 bps
+T=17, R=3 | distance=66.4036 m | fspl=76.4898 dB | sinr=-20.4277 dB | capacity=2.602975e+05 bps
+----------------------------------------------------------------------------------------------------
+Trial 31: T=8, R=12
+T=1, R=0 | distance=27.1995 m | fspl=68.7372 dB | sinr=-12.4989 dB | capacity=1.578967e+06 bps
+T=4, R=13 | distance=52.9116 m | fspl=74.5170 dB | sinr=-18.3467 dB | capacity=4.191533e+05 bps
+T=8, R=7 | distance=19.7650 m | fspl=65.9639 dB | sinr=-13.6558 dB | capacity=1.217379e+06 bps
+T=9, R=3 | distance=16.8108 m | fspl=64.5578 dB | sinr=-7.8792 dB | capacity=4.355992e+06 bps
+T=10, R=16 | distance=43.2556 m | fspl=72.7668 dB | sinr=-14.5524 dB | capacity=9.941717e+05 bps
+T=14, R=6 | distance=50.9121 m | fspl=74.1824 dB | sinr=-16.8510 dB | capacity=5.897379e+05 bps
+T=15, R=18 | distance=78.7338 m | fspl=77.9692 dB | sinr=-30.1191 dB | capacity=2.805946e+04 bps
+T=17, R=12 | distance=30.8871 m | fspl=69.8415 dB | sinr=-10.5625 dB | capacity=2.429629e+06 bps
+----------------------------------------------------------------------------------------------------
 Trial 32: T=8, R=12
-T=1, R=5 | distance=53.9047 m | fspl=74.6785 dB | sinr=-14.0418 dB | capacity=1.115840e+06 bps
-T=4, R=12 | distance=69.8754 m | fspl=76.9325 dB | sinr=-17.9501 dB | capacity=4.589207e+05 bps
-T=8, R=13 | distance=9.0114 m | fspl=59.1419 dB | sinr=-0.0486 dB | capacity=1.983897e+07 bps
-T=9, R=2 | distance=81.0100 m | fspl=78.2168 dB | sinr=-16.0507 dB | capacity=7.076202e+05 bps
-T=10, R=6 | distance=48.1966 m | fspl=73.7063 dB | sinr=-16.3645 dB | capacity=6.588487e+05 bps
-T=14, R=0 | distance=66.6037 m | fspl=76.5160 dB | sinr=-20.4766 dB | capacity=2.573970e+05 bps
-T=15, R=7 | distance=79.9257 m | fspl=78.0997 dB | sinr=-25.9639 dB | capacity=7.299041e+04 bps
-T=17, R=18 | distance=44.4163 m | fspl=72.9969 dB | sinr=-25.1377 dB | capacity=8.826103e+04 bps
+T=1, R=7 | distance=62.7215 m | fspl=75.9943 dB | sinr=-23.8516 dB | capacity=1.186174e+05 bps
+T=4, R=19 | distance=24.0643 m | fspl=67.6735 dB | sinr=-11.9850 dB | capacity=1.771363e+06 bps
+T=8, R=18 | distance=59.1600 m | fspl=75.4866 dB | sinr=-27.6332 dB | capacity=4.971741e+04 bps
+T=9, R=5 | distance=54.3857 m | fspl=74.7557 dB | sinr=-14.1220 dB | capacity=1.095810e+06 bps
+T=10, R=12 | distance=16.1170 m | fspl=64.1917 dB | sinr=-3.7504 dB | capacity=1.015143e+07 bps
+T=14, R=13 | distance=71.1511 m | fspl=77.0896 dB | sinr=-20.9477 dB | capacity=2.310463e+05 bps
+T=15, R=3 | distance=18.2183 m | fspl=65.2562 dB | sinr=-8.6815 dB | capacity=3.665867e+06 bps
+T=17, R=6 | distance=65.6841 m | fspl=76.3952 dB | sinr=-19.0994 dB | capacity=3.528597e+05 bps
 ----------------------------------------------------------------------------------------------------
 Trial 33: T=8, R=12
-T=1, R=18 | distance=76.1645 m | fspl=77.6811 dB | sinr=-29.8307 dB | capacity=2.998543e+04 bps
-T=4, R=5 | distance=53.4633 m | fspl=74.6071 dB | sinr=-13.9675 dB | capacity=1.134709e+06 bps
-T=8, R=11 | distance=92.7844 m | fspl=79.3955 dB | sinr=-19.3114 dB | capacity=3.361530e+05 bps
-T=9, R=2 | distance=81.0100 m | fspl=78.2168 dB | sinr=-16.0507 dB | capacity=7.076202e+05 bps
-T=10, R=16 | distance=43.2556 m | fspl=72.7668 dB | sinr=-14.5524 dB | capacity=9.941717e+05 bps
-T=14, R=13 | distance=71.1511 m | fspl=77.0896 dB | sinr=-20.9477 dB | capacity=2.310463e+05 bps
-T=15, R=6 | distance=17.6443 m | fspl=64.9781 dB | sinr=-6.9344 dB | capacity=5.322289e+06 bps
-T=17, R=19 | distance=53.8151 m | fspl=74.6641 dB | sinr=-19.1902 dB | capacity=3.456075e+05 bps
+T=1, R=7 | distance=62.7215 m | fspl=75.9943 dB | sinr=-23.8516 dB | capacity=1.186174e+05 bps
+T=4, R=3 | distance=71.6521 m | fspl=77.1506 dB | sinr=-21.0940 dB | capacity=2.234185e+05 bps
+T=8, R=5 | distance=88.2302 m | fspl=78.9583 dB | sinr=-18.4276 dB | capacity=4.114750e+05 bps
+T=9, R=19 | distance=60.1932 m | fspl=75.6369 dB | sinr=-20.1735 dB | capacity=2.759135e+05 bps
+T=10, R=2 | distance=90.9141 m | fspl=79.2186 dB | sinr=-17.0747 dB | capacity=5.604163e+05 bps
+T=14, R=6 | distance=50.9121 m | fspl=74.1824 dB | sinr=-16.8510 dB | capacity=5.897379e+05 bps
+T=15, R=18 | distance=78.7338 m | fspl=77.9692 dB | sinr=-30.1191 dB | capacity=2.805946e+04 bps
+T=17, R=16 | distance=23.1117 m | fspl=67.3226 dB | sinr=-8.7094 dB | capacity=3.643798e+06 bps
 ----------------------------------------------------------------------------------------------------
 Trial 34: T=8, R=12
 T=1, R=2 | distance=81.3489 m | fspl=78.2530 dB | sinr=-16.0878 dB | capacity=7.016641e+05 bps
-T=4, R=6 | distance=63.6131 m | fspl=76.1169 dB | sinr=-18.8176 dB | capacity=3.763618e+05 bps
-T=8, R=12 | distance=25.9230 m | fspl=68.3197 dB | sinr=-8.8775 dB | capacity=3.513508e+06 bps
-T=9, R=18 | distance=71.4928 m | fspl=77.1312 dB | sinr=-29.2803 dB | capacity=3.403469e+04 bps
-T=10, R=19 | distance=61.7703 m | fspl=75.8616 dB | sinr=-20.4003 dB | capacity=2.619409e+05 bps
-T=14, R=13 | distance=71.1511 m | fspl=77.0896 dB | sinr=-20.9477 dB | capacity=2.310463e+05 bps
-T=15, R=7 | distance=79.9257 m | fspl=78.0997 dB | sinr=-25.9639 dB | capacity=7.299041e+04 bps
-T=17, R=16 | distance=23.1117 m | fspl=67.3226 dB | sinr=-8.7094 dB | capacity=3.643798e+06 bps
+T=4, R=18 | distance=2.5383 m | fspl=48.1370 dB | sinr=11.5902 dB | capacity=7.893815e+07 bps
+T=8, R=16 | distance=38.2571 m | fspl=71.7002 dB | sinr=-13.4432 dB | capacity=1.277138e+06 bps
+T=9, R=5 | distance=54.3857 m | fspl=74.7557 dB | sinr=-14.1220 dB | capacity=1.095810e+06 bps
+T=10, R=11 | distance=57.9040 m | fspl=75.3002 dB | sinr=-15.1355 dB | capacity=8.711270e+05 bps
+T=14, R=12 | distance=79.2488 m | fspl=78.0259 dB | sinr=-19.0589 dB | capacity=3.561468e+05 bps
+T=15, R=3 | distance=18.2183 m | fspl=65.2562 dB | sinr=-8.6815 dB | capacity=3.665867e+06 bps
+T=17, R=13 | distance=14.5695 m | fspl=63.3149 dB | sinr=-6.2914 dB | capacity=6.087548e+06 bps
 ----------------------------------------------------------------------------------------------------
 Trial 35: T=8, R=12
 T=1, R=19 | distance=63.2289 m | fspl=76.0643 dB | sinr=-20.6048 dB | capacity=2.499430e+05 bps
-T=4, R=6 | distance=63.6131 m | fspl=76.1169 dB | sinr=-18.8176 dB | capacity=3.763618e+05 bps
-T=8, R=11 | distance=92.7844 m | fspl=79.3955 dB | sinr=-19.3114 dB | capacity=3.361530e+05 bps
+T=4, R=18 | distance=2.5383 m | fspl=48.1370 dB | sinr=11.5902 dB | capacity=7.893815e+07 bps
+T=8, R=6 | distance=76.4178 m | fspl=77.7099 dB | sinr=-20.4281 dB | capacity=2.602787e+05 bps
 T=9, R=16 | distance=56.5718 m | fspl=75.0980 dB | sinr=-16.9463 dB | capacity=5.770600e+05 bps
-T=10, R=2 | distance=90.9141 m | fspl=79.2186 dB | sinr=-17.0747 dB | capacity=5.604163e+05 bps
+T=10, R=13 | distance=42.5961 m | fspl=72.6334 dB | sinr=-16.4285 dB | capacity=6.493250e+05 bps
 T=14, R=12 | distance=79.2488 m | fspl=78.0259 dB | sinr=-19.0589 dB | capacity=3.561468e+05 bps
 T=15, R=7 | distance=79.9257 m | fspl=78.0997 dB | sinr=-25.9639 dB | capacity=7.299041e+04 bps
-T=17, R=18 | distance=44.4163 m | fspl=72.9969 dB | sinr=-25.1377 dB | capacity=8.826103e+04 bps
+T=17, R=3 | distance=66.4036 m | fspl=76.4898 dB | sinr=-20.4277 dB | capacity=2.602975e+05 bps
 ----------------------------------------------------------------------------------------------------
 Trial 36: T=8, R=12
-T=1, R=6 | distance=24.8664 m | fspl=67.9583 dB | sinr=-10.3307 dB | capacity=2.557093e+06 bps
-T=4, R=11 | distance=95.1821 m | fspl=79.6171 dB | sinr=-19.5355 dB | capacity=3.193380e+05 bps
-T=8, R=7 | distance=19.7650 m | fspl=65.9639 dB | sinr=-13.6558 dB | capacity=1.217379e+06 bps
-T=9, R=3 | distance=16.8108 m | fspl=64.5578 dB | sinr=-7.8792 dB | capacity=4.355992e+06 bps
-T=10, R=5 | distance=69.0978 m | fspl=76.8353 dB | sinr=-16.2650 dB | capacity=6.739352e+05 bps
-T=14, R=19 | distance=7.3816 m | fspl=57.4090 dB | sinr=2.3642 dB | capacity=2.890958e+07 bps
-T=15, R=12 | distance=77.3602 m | fspl=77.8163 dB | sinr=-18.8468 dB | capacity=3.738633e+05 bps
-T=17, R=2 | distance=87.1173 m | fspl=78.8481 dB | sinr=-16.6966 dB | capacity=6.108618e+05 bps
-----------------------------------------------------------------------------------------------------
-Trial 37: T=8, R=12
-T=1, R=0 | distance=27.1995 m | fspl=68.7372 dB | sinr=-12.4989 dB | capacity=1.578967e+06 bps
-T=4, R=2 | distance=52.6332 m | fspl=74.4712 dB | sinr=-12.1549 dB | capacity=1.705354e+06 bps
-T=8, R=19 | distance=68.8915 m | fspl=76.8093 dB | sinr=-21.3558 dB | capacity=2.103995e+05 bps
-T=9, R=18 | distance=71.4928 m | fspl=77.1312 dB | sinr=-29.2803 dB | capacity=3.403469e+04 bps
-T=10, R=11 | distance=57.9040 m | fspl=75.3002 dB | sinr=-15.1355 dB | capacity=8.711270e+05 bps
-T=14, R=12 | distance=79.2488 m | fspl=78.0259 dB | sinr=-19.0589 dB | capacity=3.561468e+05 bps
-T=15, R=5 | distance=37.6177 m | fspl=71.5538 dB | sinr=-10.7329 dB | capacity=2.339861e+06 bps
-T=17, R=13 | distance=14.5695 m | fspl=63.3149 dB | sinr=-6.2914 dB | capacity=6.087548e+06 bps
-----------------------------------------------------------------------------------------------------
-Trial 38: T=8, R=12
-T=1, R=12 | distance=50.9089 m | fspl=74.1819 dB | sinr=-15.1375 dB | capacity=8.707376e+05 bps
-T=4, R=19 | distance=24.0643 m | fspl=67.6735 dB | sinr=-11.9850 dB | capacity=1.771363e+06 bps
-T=8, R=3 | distance=75.1203 m | fspl=77.5611 dB | sinr=-21.5076 dB | capacity=2.031937e+05 bps
-T=9, R=5 | distance=54.3857 m | fspl=74.7557 dB | sinr=-14.1220 dB | capacity=1.095810e+06 bps
-T=10, R=0 | distance=8.5832 m | fspl=58.7190 dB | sinr=0.6049 dB | capacity=2.207925e+07 bps
-T=14, R=16 | distance=35.6562 m | fspl=71.0887 dB | sinr=-12.8018 dB | capacity=1.475266e+06 bps
-T=15, R=7 | distance=79.9257 m | fspl=78.0997 dB | sinr=-25.9639 dB | capacity=7.299041e+04 bps
-T=17, R=2 | distance=87.1173 m | fspl=78.8481 dB | sinr=-16.6966 dB | capacity=6.108618e+05 bps
-----------------------------------------------------------------------------------------------------
-Trial 39: T=8, R=12
 T=1, R=18 | distance=76.1645 m | fspl=77.6811 dB | sinr=-29.8307 dB | capacity=2.998543e+04 bps
-T=4, R=16 | distance=21.3256 m | fspl=66.6240 dB | sinr=-7.9075 dB | capacity=4.329722e+06 bps
-T=8, R=12 | distance=25.9230 m | fspl=68.3197 dB | sinr=-8.8775 dB | capacity=3.513508e+06 bps
-T=9, R=7 | distance=55.7838 m | fspl=74.9762 dB | sinr=-22.8287 dB | capacity=1.500384e+05 bps
-T=10, R=5 | distance=69.0978 m | fspl=76.8353 dB | sinr=-16.2650 dB | capacity=6.739352e+05 bps
+T=4, R=19 | distance=24.0643 m | fspl=67.6735 dB | sinr=-11.9850 dB | capacity=1.771363e+06 bps
+T=8, R=13 | distance=9.0114 m | fspl=59.1419 dB | sinr=-0.0486 dB | capacity=1.983897e+07 bps
+T=9, R=6 | distance=26.5119 m | fspl=68.5148 dB | sinr=-10.9354 dB | capacity=2.237260e+06 bps
+T=10, R=2 | distance=90.9141 m | fspl=79.2186 dB | sinr=-17.0747 dB | capacity=5.604163e+05 bps
 T=14, R=3 | distance=61.5532 m | fspl=75.8310 dB | sinr=-19.7625 dB | capacity=3.031621e+05 bps
 T=15, R=11 | distance=23.7867 m | fspl=67.5727 dB | sinr=-6.6972 dB | capacity=5.593835e+06 bps
 T=17, R=0 | distance=39.3527 m | fspl=71.9455 dB | sinr=-15.8330 dB | capacity=7.435324e+05 bps
 ----------------------------------------------------------------------------------------------------
+Trial 37: T=8, R=12
+T=1, R=11 | distance=22.5579 m | fspl=67.1120 dB | sinr=-6.1312 dB | capacity=6.293090e+06 bps
+T=4, R=2 | distance=52.6332 m | fspl=74.4712 dB | sinr=-12.1549 dB | capacity=1.705354e+06 bps
+T=8, R=13 | distance=9.0114 m | fspl=59.1419 dB | sinr=-0.0486 dB | capacity=1.983897e+07 bps
+T=9, R=19 | distance=60.1932 m | fspl=75.6369 dB | sinr=-20.1735 dB | capacity=2.759135e+05 bps
+T=10, R=6 | distance=48.1966 m | fspl=73.7063 dB | sinr=-16.3645 dB | capacity=6.588487e+05 bps
+T=14, R=12 | distance=79.2488 m | fspl=78.0259 dB | sinr=-19.0589 dB | capacity=3.561468e+05 bps
+T=15, R=7 | distance=79.9257 m | fspl=78.0997 dB | sinr=-25.9639 dB | capacity=7.299041e+04 bps
+T=17, R=16 | distance=23.1117 m | fspl=67.3226 dB | sinr=-8.7094 dB | capacity=3.643798e+06 bps
+----------------------------------------------------------------------------------------------------
+Trial 38: T=8, R=12
+T=1, R=16 | distance=62.5073 m | fspl=75.9646 dB | sinr=-17.8288 dB | capacity=4.718138e+05 bps
+T=4, R=13 | distance=52.9116 m | fspl=74.5170 dB | sinr=-18.3467 dB | capacity=4.191533e+05 bps
+T=8, R=0 | distance=43.4505 m | fspl=72.8059 dB | sinr=-16.7137 dB | capacity=6.084805e+05 bps
+T=9, R=12 | distance=43.9792 m | fspl=72.9109 dB | sinr=-13.8211 dB | capacity=1.172843e+06 bps
+T=10, R=5 | distance=69.0978 m | fspl=76.8353 dB | sinr=-16.2650 dB | capacity=6.739352e+05 bps
+T=14, R=2 | distance=29.8685 m | fspl=69.5503 dB | sinr=-6.6383 dB | capacity=5.663161e+06 bps
+T=15, R=6 | distance=17.6443 m | fspl=64.9781 dB | sinr=-6.9344 dB | capacity=5.322289e+06 bps
+T=17, R=7 | distance=4.5932 m | fspl=53.2883 dB | sinr=5.1256 dB | capacity=4.178339e+07 bps
+----------------------------------------------------------------------------------------------------
+Trial 39: T=8, R=12
+T=1, R=19 | distance=63.2289 m | fspl=76.0643 dB | sinr=-20.6048 dB | capacity=2.499430e+05 bps
+T=4, R=3 | distance=71.6521 m | fspl=77.1506 dB | sinr=-21.0940 dB | capacity=2.234185e+05 bps
+T=8, R=12 | distance=25.9230 m | fspl=68.3197 dB | sinr=-8.8775 dB | capacity=3.513508e+06 bps
+T=9, R=18 | distance=71.4928 m | fspl=77.1312 dB | sinr=-29.2803 dB | capacity=3.403469e+04 bps
+T=10, R=6 | distance=48.1966 m | fspl=73.7063 dB | sinr=-16.3645 dB | capacity=6.588487e+05 bps
+T=14, R=16 | distance=35.6562 m | fspl=71.0887 dB | sinr=-12.8018 dB | capacity=1.475266e+06 bps
+T=15, R=2 | distance=65.0635 m | fspl=76.3128 dB | sinr=-14.0869 dB | capacity=1.104519e+06 bps
+T=17, R=0 | distance=39.3527 m | fspl=71.9455 dB | sinr=-15.8330 dB | capacity=7.435324e+05 bps
+----------------------------------------------------------------------------------------------------
 Trial 40: T=8, R=12
-T=1, R=6 | distance=24.8664 m | fspl=67.9583 dB | sinr=-10.3307 dB | capacity=2.557093e+06 bps
-T=4, R=16 | distance=21.3256 m | fspl=66.6240 dB | sinr=-7.9075 dB | capacity=4.329722e+06 bps
-T=8, R=19 | distance=68.8915 m | fspl=76.8093 dB | sinr=-21.3558 dB | capacity=2.103995e+05 bps
+T=1, R=3 | distance=13.1777 m | fspl=62.4428 dB | sinr=-5.2958 dB | capacity=7.468092e+06 bps
+T=4, R=19 | distance=24.0643 m | fspl=67.6735 dB | sinr=-11.9850 dB | capacity=1.771363e+06 bps
+T=8, R=0 | distance=43.4505 m | fspl=72.8059 dB | sinr=-16.7137 dB | capacity=6.084805e+05 bps
+T=9, R=2 | distance=81.0100 m | fspl=78.2168 dB | sinr=-16.0507 dB | capacity=7.076202e+05 bps
+T=10, R=5 | distance=69.0978 m | fspl=76.8353 dB | sinr=-16.2650 dB | capacity=6.739352e+05 bps
+T=14, R=7 | distance=53.9774 m | fspl=74.6902 dB | sinr=-22.5413 dB | capacity=1.602770e+05 bps
+T=15, R=16 | distance=72.9367 m | fspl=77.3049 dB | sinr=-19.1881 dB | capacity=3.457741e+05 bps
+T=17, R=18 | distance=44.4163 m | fspl=72.9969 dB | sinr=-25.1377 dB | capacity=8.826103e+04 bps
+----------------------------------------------------------------------------------------------------
+Trial 41: T=8, R=12
+T=1, R=12 | distance=50.9089 m | fspl=74.1819 dB | sinr=-15.1375 dB | capacity=8.707376e+05 bps
+T=4, R=19 | distance=24.0643 m | fspl=67.6735 dB | sinr=-11.9850 dB | capacity=1.771363e+06 bps
+T=8, R=13 | distance=9.0114 m | fspl=59.1419 dB | sinr=-0.0486 dB | capacity=1.983897e+07 bps
 T=9, R=2 | distance=81.0100 m | fspl=78.2168 dB | sinr=-16.0507 dB | capacity=7.076202e+05 bps
 T=10, R=0 | distance=8.5832 m | fspl=58.7190 dB | sinr=0.6049 dB | capacity=2.207925e+07 bps
 T=14, R=3 | distance=61.5532 m | fspl=75.8310 dB | sinr=-19.7625 dB | capacity=3.031621e+05 bps
 T=15, R=7 | distance=79.9257 m | fspl=78.0997 dB | sinr=-25.9639 dB | capacity=7.299041e+04 bps
-T=17, R=13 | distance=14.5695 m | fspl=63.3149 dB | sinr=-6.2914 dB | capacity=6.087548e+06 bps
-----------------------------------------------------------------------------------------------------
-Trial 41: T=8, R=12
-T=1, R=19 | distance=63.2289 m | fspl=76.0643 dB | sinr=-20.6048 dB | capacity=2.499430e+05 bps
-T=4, R=12 | distance=69.8754 m | fspl=76.9325 dB | sinr=-17.9501 dB | capacity=4.589207e+05 bps
-T=8, R=6 | distance=76.4178 m | fspl=77.7099 dB | sinr=-20.4281 dB | capacity=2.602787e+05 bps
-T=9, R=7 | distance=55.7838 m | fspl=74.9762 dB | sinr=-22.8287 dB | capacity=1.500384e+05 bps
-T=10, R=18 | distance=63.9748 m | fspl=76.1662 dB | sinr=-28.3139 dB | capacity=4.251017e+04 bps
-T=14, R=2 | distance=29.8685 m | fspl=69.5503 dB | sinr=-6.6383 dB | capacity=5.663161e+06 bps
-T=15, R=11 | distance=23.7867 m | fspl=67.5727 dB | sinr=-6.6972 dB | capacity=5.593835e+06 bps
-T=17, R=3 | distance=66.4036 m | fspl=76.4898 dB | sinr=-20.4277 dB | capacity=2.602975e+05 bps
+T=17, R=5 | distance=74.3878 m | fspl=77.4760 dB | sinr=-16.9199 dB | capacity=5.805541e+05 bps
 ----------------------------------------------------------------------------------------------------
 Trial 42: T=8, R=12
-T=1, R=11 | distance=22.5579 m | fspl=67.1120 dB | sinr=-6.1312 dB | capacity=6.293090e+06 bps
-T=4, R=6 | distance=63.6131 m | fspl=76.1169 dB | sinr=-18.8176 dB | capacity=3.763618e+05 bps
-T=8, R=2 | distance=102.1452 m | fspl=80.2304 dB | sinr=-18.1041 dB | capacity=4.430545e+05 bps
-T=9, R=5 | distance=54.3857 m | fspl=74.7557 dB | sinr=-14.1220 dB | capacity=1.095810e+06 bps
+T=1, R=19 | distance=63.2289 m | fspl=76.0643 dB | sinr=-20.6048 dB | capacity=2.499430e+05 bps
+T=4, R=5 | distance=53.4633 m | fspl=74.6071 dB | sinr=-13.9675 dB | capacity=1.134709e+06 bps
+T=8, R=0 | distance=43.4505 m | fspl=72.8059 dB | sinr=-16.7137 dB | capacity=6.084805e+05 bps
+T=9, R=2 | distance=81.0100 m | fspl=78.2168 dB | sinr=-16.0507 dB | capacity=7.076202e+05 bps
 T=10, R=7 | distance=33.9443 m | fspl=70.6613 dB | sinr=-18.4752 dB | capacity=4.070198e+05 bps
-T=14, R=3 | distance=61.5532 m | fspl=75.8310 dB | sinr=-19.7625 dB | capacity=3.031621e+05 bps
-T=15, R=12 | distance=77.3602 m | fspl=77.8163 dB | sinr=-18.8468 dB | capacity=3.738633e+05 bps
-T=17, R=19 | distance=53.8151 m | fspl=74.6641 dB | sinr=-19.1902 dB | capacity=3.456075e+05 bps
+T=14, R=13 | distance=71.1511 m | fspl=77.0896 dB | sinr=-20.9477 dB | capacity=2.310463e+05 bps
+T=15, R=11 | distance=23.7867 m | fspl=67.5727 dB | sinr=-6.6972 dB | capacity=5.593835e+06 bps
+T=17, R=16 | distance=23.1117 m | fspl=67.3226 dB | sinr=-8.7094 dB | capacity=3.643798e+06 bps
 ----------------------------------------------------------------------------------------------------
 Trial 43: T=8, R=12
 T=1, R=3 | distance=13.1777 m | fspl=62.4428 dB | sinr=-5.2958 dB | capacity=7.468092e+06 bps
-T=4, R=6 | distance=63.6131 m | fspl=76.1169 dB | sinr=-18.8176 dB | capacity=3.763618e+05 bps
-T=8, R=18 | distance=59.1600 m | fspl=75.4866 dB | sinr=-27.6332 dB | capacity=4.971741e+04 bps
-T=9, R=19 | distance=60.1932 m | fspl=75.6369 dB | sinr=-20.1735 dB | capacity=2.759135e+05 bps
-T=10, R=12 | distance=16.1170 m | fspl=64.1917 dB | sinr=-3.7504 dB | capacity=1.015143e+07 bps
-T=14, R=0 | distance=66.6037 m | fspl=76.5160 dB | sinr=-20.4766 dB | capacity=2.573970e+05 bps
-T=15, R=7 | distance=79.9257 m | fspl=78.0997 dB | sinr=-25.9639 dB | capacity=7.299041e+04 bps
-T=17, R=13 | distance=14.5695 m | fspl=63.3149 dB | sinr=-6.2914 dB | capacity=6.087548e+06 bps
-----------------------------------------------------------------------------------------------------
-Trial 44: T=8, R=12
-T=1, R=18 | distance=76.1645 m | fspl=77.6811 dB | sinr=-29.8307 dB | capacity=2.998543e+04 bps
-T=4, R=0 | distance=64.5945 m | fspl=76.2499 dB | sinr=-20.2081 dB | capacity=2.737364e+05 bps
-T=8, R=11 | distance=92.7844 m | fspl=79.3955 dB | sinr=-19.3114 dB | capacity=3.361530e+05 bps
-T=9, R=3 | distance=16.8108 m | fspl=64.5578 dB | sinr=-7.8792 dB | capacity=4.355992e+06 bps
-T=10, R=12 | distance=16.1170 m | fspl=64.1917 dB | sinr=-3.7504 dB | capacity=1.015143e+07 bps
-T=14, R=16 | distance=35.6562 m | fspl=71.0887 dB | sinr=-12.8018 dB | capacity=1.475266e+06 bps
-T=15, R=6 | distance=17.6443 m | fspl=64.9781 dB | sinr=-6.9344 dB | capacity=5.322289e+06 bps
-T=17, R=7 | distance=4.5932 m | fspl=53.2883 dB | sinr=5.1256 dB | capacity=4.178339e+07 bps
-----------------------------------------------------------------------------------------------------
-Trial 45: T=8, R=12
-T=1, R=16 | distance=62.5073 m | fspl=75.9646 dB | sinr=-17.8288 dB | capacity=4.718138e+05 bps
 T=4, R=19 | distance=24.0643 m | fspl=67.6735 dB | sinr=-11.9850 dB | capacity=1.771363e+06 bps
-T=8, R=18 | distance=59.1600 m | fspl=75.4866 dB | sinr=-27.6332 dB | capacity=4.971741e+04 bps
-T=9, R=13 | distance=68.9809 m | fspl=76.8206 dB | sinr=-20.6764 dB | capacity=2.458760e+05 bps
-T=10, R=12 | distance=16.1170 m | fspl=64.1917 dB | sinr=-3.7504 dB | capacity=1.015143e+07 bps
-T=14, R=11 | distance=84.3002 m | fspl=78.5626 dB | sinr=-18.4677 dB | capacity=4.077247e+05 bps
-T=15, R=7 | distance=79.9257 m | fspl=78.0997 dB | sinr=-25.9639 dB | capacity=7.299041e+04 bps
-T=17, R=6 | distance=65.6841 m | fspl=76.3952 dB | sinr=-19.0994 dB | capacity=3.528597e+05 bps
-----------------------------------------------------------------------------------------------------
-Trial 46: T=8, R=12
-T=1, R=0 | distance=27.1995 m | fspl=68.7372 dB | sinr=-12.4989 dB | capacity=1.578967e+06 bps
-T=4, R=16 | distance=21.3256 m | fspl=66.6240 dB | sinr=-7.9075 dB | capacity=4.329722e+06 bps
-T=8, R=5 | distance=88.2302 m | fspl=78.9583 dB | sinr=-18.4276 dB | capacity=4.114750e+05 bps
-T=9, R=3 | distance=16.8108 m | fspl=64.5578 dB | sinr=-7.8792 dB | capacity=4.355992e+06 bps
+T=8, R=12 | distance=25.9230 m | fspl=68.3197 dB | sinr=-8.8775 dB | capacity=3.513508e+06 bps
+T=9, R=16 | distance=56.5718 m | fspl=75.0980 dB | sinr=-16.9463 dB | capacity=5.770600e+05 bps
 T=10, R=6 | distance=48.1966 m | fspl=73.7063 dB | sinr=-16.3645 dB | capacity=6.588487e+05 bps
 T=14, R=7 | distance=53.9774 m | fspl=74.6902 dB | sinr=-22.5413 dB | capacity=1.602770e+05 bps
-T=15, R=2 | distance=65.0635 m | fspl=76.3128 dB | sinr=-14.0869 dB | capacity=1.104519e+06 bps
-T=17, R=18 | distance=44.4163 m | fspl=72.9969 dB | sinr=-25.1377 dB | capacity=8.826103e+04 bps
+T=15, R=5 | distance=37.6177 m | fspl=71.5538 dB | sinr=-10.7329 dB | capacity=2.339861e+06 bps
+T=17, R=11 | distance=86.3867 m | fspl=78.7749 dB | sinr=-18.6830 dB | capacity=3.881358e+05 bps
+----------------------------------------------------------------------------------------------------
+Trial 44: T=8, R=12
+T=1, R=5 | distance=53.9047 m | fspl=74.6785 dB | sinr=-14.0418 dB | capacity=1.115840e+06 bps
+T=4, R=3 | distance=71.6521 m | fspl=77.1506 dB | sinr=-21.0940 dB | capacity=2.234185e+05 bps
+T=8, R=18 | distance=59.1600 m | fspl=75.4866 dB | sinr=-27.6332 dB | capacity=4.971741e+04 bps
+T=9, R=6 | distance=26.5119 m | fspl=68.5148 dB | sinr=-10.9354 dB | capacity=2.237260e+06 bps
+T=10, R=13 | distance=42.5961 m | fspl=72.6334 dB | sinr=-16.4285 dB | capacity=6.493250e+05 bps
+T=14, R=12 | distance=79.2488 m | fspl=78.0259 dB | sinr=-19.0589 dB | capacity=3.561468e+05 bps
+T=15, R=7 | distance=79.9257 m | fspl=78.0997 dB | sinr=-25.9639 dB | capacity=7.299041e+04 bps
+T=17, R=2 | distance=87.1173 m | fspl=78.8481 dB | sinr=-16.6966 dB | capacity=6.108618e+05 bps
+----------------------------------------------------------------------------------------------------
+Trial 45: T=8, R=12
+T=1, R=5 | distance=53.9047 m | fspl=74.6785 dB | sinr=-14.0418 dB | capacity=1.115840e+06 bps
+T=4, R=16 | distance=21.3256 m | fspl=66.6240 dB | sinr=-7.9075 dB | capacity=4.329722e+06 bps
+T=8, R=7 | distance=19.7650 m | fspl=65.9639 dB | sinr=-13.6558 dB | capacity=1.217379e+06 bps
+T=9, R=3 | distance=16.8108 m | fspl=64.5578 dB | sinr=-7.8792 dB | capacity=4.355992e+06 bps
+T=10, R=18 | distance=63.9748 m | fspl=76.1662 dB | sinr=-28.3139 dB | capacity=4.251017e+04 bps
+T=14, R=0 | distance=66.6037 m | fspl=76.5160 dB | sinr=-20.4766 dB | capacity=2.573970e+05 bps
+T=15, R=11 | distance=23.7867 m | fspl=67.5727 dB | sinr=-6.6972 dB | capacity=5.593835e+06 bps
+T=17, R=13 | distance=14.5695 m | fspl=63.3149 dB | sinr=-6.2914 dB | capacity=6.087548e+06 bps
+----------------------------------------------------------------------------------------------------
+Trial 46: T=8, R=12
+T=1, R=5 | distance=53.9047 m | fspl=74.6785 dB | sinr=-14.0418 dB | capacity=1.115840e+06 bps
+T=4, R=2 | distance=52.6332 m | fspl=74.4712 dB | sinr=-12.1549 dB | capacity=1.705354e+06 bps
+T=8, R=0 | distance=43.4505 m | fspl=72.8059 dB | sinr=-16.7137 dB | capacity=6.084805e+05 bps
+T=9, R=12 | distance=43.9792 m | fspl=72.9109 dB | sinr=-13.8211 dB | capacity=1.172843e+06 bps
+T=10, R=19 | distance=61.7703 m | fspl=75.8616 dB | sinr=-20.4003 dB | capacity=2.619409e+05 bps
+T=14, R=11 | distance=84.3002 m | fspl=78.5626 dB | sinr=-18.4677 dB | capacity=4.077247e+05 bps
+T=15, R=13 | distance=96.4645 m | fspl=79.7333 dB | sinr=-23.6073 dB | capacity=1.254682e+05 bps
+T=17, R=6 | distance=65.6841 m | fspl=76.3952 dB | sinr=-19.0994 dB | capacity=3.528597e+05 bps
 ----------------------------------------------------------------------------------------------------
 Trial 47: T=8, R=12
+T=1, R=6 | distance=24.8664 m | fspl=67.9583 dB | sinr=-10.3307 dB | capacity=2.557093e+06 bps
+T=4, R=12 | distance=69.8754 m | fspl=76.9325 dB | sinr=-17.9501 dB | capacity=4.589207e+05 bps
+T=8, R=13 | distance=9.0114 m | fspl=59.1419 dB | sinr=-0.0486 dB | capacity=1.983897e+07 bps
+T=9, R=2 | distance=81.0100 m | fspl=78.2168 dB | sinr=-16.0507 dB | capacity=7.076202e+05 bps
+T=10, R=5 | distance=69.0978 m | fspl=76.8353 dB | sinr=-16.2650 dB | capacity=6.739352e+05 bps
+T=14, R=7 | distance=53.9774 m | fspl=74.6902 dB | sinr=-22.5413 dB | capacity=1.602770e+05 bps
+T=15, R=3 | distance=18.2183 m | fspl=65.2562 dB | sinr=-8.6815 dB | capacity=3.665867e+06 bps
+T=17, R=19 | distance=53.8151 m | fspl=74.6641 dB | sinr=-19.1902 dB | capacity=3.456075e+05 bps
+----------------------------------------------------------------------------------------------------
+Trial 48: T=8, R=12
+T=1, R=12 | distance=50.9089 m | fspl=74.1819 dB | sinr=-15.1375 dB | capacity=8.707376e+05 bps
+T=4, R=5 | distance=53.4633 m | fspl=74.6071 dB | sinr=-13.9675 dB | capacity=1.134709e+06 bps
+T=8, R=11 | distance=92.7844 m | fspl=79.3955 dB | sinr=-19.3114 dB | capacity=3.361530e+05 bps
+T=9, R=7 | distance=55.7838 m | fspl=74.9762 dB | sinr=-22.8287 dB | capacity=1.500384e+05 bps
+T=10, R=13 | distance=42.5961 m | fspl=72.6334 dB | sinr=-16.4285 dB | capacity=6.493250e+05 bps
+T=14, R=19 | distance=7.3816 m | fspl=57.4090 dB | sinr=2.3642 dB | capacity=2.890958e+07 bps
+T=15, R=16 | distance=72.9367 m | fspl=77.3049 dB | sinr=-19.1881 dB | capacity=3.457741e+05 bps
+T=17, R=2 | distance=87.1173 m | fspl=78.8481 dB | sinr=-16.6966 dB | capacity=6.108618e+05 bps
+----------------------------------------------------------------------------------------------------
+Trial 49: T=8, R=12
 T=1, R=7 | distance=62.7215 m | fspl=75.9943 dB | sinr=-23.8516 dB | capacity=1.186174e+05 bps
-T=4, R=18 | distance=2.5383 m | fspl=48.1370 dB | sinr=11.5902 dB | capacity=7.893815e+07 bps
-T=8, R=12 | distance=25.9230 m | fspl=68.3197 dB | sinr=-8.8775 dB | capacity=3.513508e+06 bps
-T=9, R=6 | distance=26.5119 m | fspl=68.5148 dB | sinr=-10.9354 dB | capacity=2.237260e+06 bps
+T=4, R=0 | distance=64.5945 m | fspl=76.2499 dB | sinr=-20.2081 dB | capacity=2.737364e+05 bps
+T=8, R=13 | distance=9.0114 m | fspl=59.1419 dB | sinr=-0.0486 dB | capacity=1.983897e+07 bps
+T=9, R=11 | distance=29.8040 m | fspl=69.5315 dB | sinr=-8.9808 dB | capacity=3.435665e+06 bps
 T=10, R=16 | distance=43.2556 m | fspl=72.7668 dB | sinr=-14.5524 dB | capacity=9.941717e+05 bps
-T=14, R=13 | distance=71.1511 m | fspl=77.0896 dB | sinr=-20.9477 dB | capacity=2.310463e+05 bps
+T=14, R=5 | distance=32.5996 m | fspl=70.3102 dB | sinr=-9.3659 dB | capacity=3.159517e+06 bps
 T=15, R=19 | distance=59.7323 m | fspl=75.5702 dB | sinr=-20.1061 dB | capacity=2.802090e+05 bps
 T=17, R=3 | distance=66.4036 m | fspl=76.4898 dB | sinr=-20.4277 dB | capacity=2.602975e+05 bps
 ----------------------------------------------------------------------------------------------------
-Trial 48: T=8, R=12
-T=1, R=6 | distance=24.8664 m | fspl=67.9583 dB | sinr=-10.3307 dB | capacity=2.557093e+06 bps
-T=4, R=2 | distance=52.6332 m | fspl=74.4712 dB | sinr=-12.1549 dB | capacity=1.705354e+06 bps
-T=8, R=18 | distance=59.1600 m | fspl=75.4866 dB | sinr=-27.6332 dB | capacity=4.971741e+04 bps
-T=9, R=16 | distance=56.5718 m | fspl=75.0980 dB | sinr=-16.9463 dB | capacity=5.770600e+05 bps
-T=10, R=11 | distance=57.9040 m | fspl=75.3002 dB | sinr=-15.1355 dB | capacity=8.711270e+05 bps
-T=14, R=3 | distance=61.5532 m | fspl=75.8310 dB | sinr=-19.7625 dB | capacity=3.031621e+05 bps
-T=15, R=12 | distance=77.3602 m | fspl=77.8163 dB | sinr=-18.8468 dB | capacity=3.738633e+05 bps
-T=17, R=19 | distance=53.8151 m | fspl=74.6641 dB | sinr=-19.1902 dB | capacity=3.456075e+05 bps
-----------------------------------------------------------------------------------------------------
-Trial 49: T=8, R=12
-T=1, R=5 | distance=53.9047 m | fspl=74.6785 dB | sinr=-14.0418 dB | capacity=1.115840e+06 bps
-T=4, R=18 | distance=2.5383 m | fspl=48.1370 dB | sinr=11.5902 dB | capacity=7.893815e+07 bps
-T=8, R=13 | distance=9.0114 m | fspl=59.1419 dB | sinr=-0.0486 dB | capacity=1.983897e+07 bps
-T=9, R=6 | distance=26.5119 m | fspl=68.5148 dB | sinr=-10.9354 dB | capacity=2.237260e+06 bps
-T=10, R=12 | distance=16.1170 m | fspl=64.1917 dB | sinr=-3.7504 dB | capacity=1.015143e+07 bps
-T=14, R=19 | distance=7.3816 m | fspl=57.4090 dB | sinr=2.3642 dB | capacity=2.890958e+07 bps
-T=15, R=0 | distance=52.9437 m | fspl=74.5223 dB | sinr=-18.4602 dB | capacity=4.084199e+05 bps
-T=17, R=16 | distance=23.1117 m | fspl=67.3226 dB | sinr=-8.7094 dB | capacity=3.643798e+06 bps
-----------------------------------------------------------------------------------------------------
 Trial 50: T=8, R=12
-T=1, R=0 | distance=27.1995 m | fspl=68.7372 dB | sinr=-12.4989 dB | capacity=1.578967e+06 bps
-T=4, R=19 | distance=24.0643 m | fspl=67.6735 dB | sinr=-11.9850 dB | capacity=1.771363e+06 bps
+T=1, R=3 | distance=13.1777 m | fspl=62.4428 dB | sinr=-5.2958 dB | capacity=7.468092e+06 bps
+T=4, R=2 | distance=52.6332 m | fspl=74.4712 dB | sinr=-12.1549 dB | capacity=1.705354e+06 bps
 T=8, R=7 | distance=19.7650 m | fspl=65.9639 dB | sinr=-13.6558 dB | capacity=1.217379e+06 bps
-T=9, R=11 | distance=29.8040 m | fspl=69.5315 dB | sinr=-8.9808 dB | capacity=3.435665e+06 bps
+T=9, R=16 | distance=56.5718 m | fspl=75.0980 dB | sinr=-16.9463 dB | capacity=5.770600e+05 bps
 T=10, R=5 | distance=69.0978 m | fspl=76.8353 dB | sinr=-16.2650 dB | capacity=6.739352e+05 bps
-T=14, R=2 | distance=29.8685 m | fspl=69.5503 dB | sinr=-6.6383 dB | capacity=5.663161e+06 bps
-T=15, R=6 | distance=17.6443 m | fspl=64.9781 dB | sinr=-6.9344 dB | capacity=5.322289e+06 bps
-T=17, R=3 | distance=66.4036 m | fspl=76.4898 dB | sinr=-20.4277 dB | capacity=2.602975e+05 bps
+T=14, R=18 | distance=20.8771 m | fspl=66.4394 dB | sinr=-18.5331 dB | capacity=4.016699e+05 bps
+T=15, R=12 | distance=77.3602 m | fspl=77.8163 dB | sinr=-18.8468 dB | capacity=3.738633e+05 bps
+T=17, R=6 | distance=65.6841 m | fspl=76.3952 dB | sinr=-19.0994 dB | capacity=3.528597e+05 bps
 ----------------------------------------------------------------------------------------------------

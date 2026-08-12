@@ -29,7 +29,7 @@ def pos(seed=42):
     return ar, nd, node_positions, roles
 
 
-# Build one-to-one transmit/receive links by randomly assigning each transmitter a distinct receiver.
+# Building 1:1 transmiter/receiver links at random positions
 def r_data(node_positions, roles=None, seed=None):
     if roles is None:
         roles = ["R"] * len(node_positions)

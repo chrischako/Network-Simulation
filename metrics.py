@@ -95,7 +95,7 @@ def _make_result_dtype():
     ])
 
 
-# Save all results from all tries to text and numpy files.
+# Saving all results from all tries to text and numpy files.
 def save_all_results(trial_num, pairs, roles, node_positions, output_lines=None, append=True, txt_path="results.txt", npy_path="results.npy"):
     t_count = roles.count("T")
     r_count = roles.count("R")
