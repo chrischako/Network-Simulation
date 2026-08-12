@@ -86,6 +86,8 @@ def _make_result_dtype():
         ("trial_num", np.int32),
         ("t_count", np.int32),
         ("r_count", np.int32),
+        ("tx_idx", np.int32),
+        ("rx_idx", np.int32),
         ("distance", np.float64),
         ("fspl", np.float64),
         ("sinr_db", np.float64),
@@ -102,7 +104,7 @@ def save_all_results(trial_num, pairs, roles, node_positions, output_lines=None,
     for tx_idx, rx_idx in pairs:
         sinr, capacity, dist, fspl = calculate_metrics(tx_idx, rx_idx, node_positions)
         sinr_db = 10 * np.log10(sinr)
-        records.append((trial_num, t_count, r_count, dist, fspl, sinr_db, capacity))
+        records.append((trial_num, t_count, r_count, tx_idx, rx_idx, dist, fspl, sinr_db, capacity))
 
     text_mode = "a" if append else "w"
     with open(txt_path, text_mode) as f:
@@ -112,17 +114,21 @@ def save_all_results(trial_num, pairs, roles, node_positions, output_lines=None,
         for tx_idx, rx_idx in pairs:
             sinr, capacity, dist, fspl = calculate_metrics(tx_idx, rx_idx, node_positions)
             sinr_db = 10 * np.log10(sinr)
-            f.write(f"T={t_count}, R={r_count} | distance={dist:.4f} m | fspl={fspl:.4f} dB | sinr={sinr_db:.4f} dB | capacity={capacity:.6e} bps\n")
+            f.write(f"T={tx_idx}, R={rx_idx} | distance={dist:.4f} m | fspl={fspl:.4f} dB | sinr={sinr_db:.4f} dB | capacity={capacity:.6e} bps\n")
         f.write("-" * 100 + "\n")
 
+    new_dtype = _make_result_dtype()
     if append and os.path.exists(npy_path):
-        existing = np.load(npy_path, allow_pickle=False)
-        if existing.size == 0:
-            new_array = np.array(records, dtype=_make_result_dtype())
-        else:
-            new_array = np.concatenate([existing, np.array(records, dtype=_make_result_dtype())])
+        try:
+            existing = np.load(npy_path, allow_pickle=False)
+            if existing.size == 0 or existing.dtype.names != new_dtype.names:
+                new_array = np.array(records, dtype=new_dtype)
+            else:
+                new_array = np.concatenate([existing, np.array(records, dtype=new_dtype)])
+        except Exception:
+            new_array = np.array(records, dtype=new_dtype)
     else:
-        new_array = np.array(records, dtype=_make_result_dtype())
+        new_array = np.array(records, dtype=new_dtype)
 
     np.save(npy_path, new_array)
 
