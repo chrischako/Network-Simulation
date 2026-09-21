@@ -7,11 +7,12 @@ ratio (SINR), and the resulting Shannon capacity.  This script treats the
 capacity as the value to predict and the other numeric values as input
 features.
 
-The model predicts ``log10(capacity)`` instead of capacity directly.  The
-capacities range from thousands to tens of millions of bits per second, so
-the logarithm gives the neural network a better-scaled regression target.
-Predictions are converted back to bits per second before they are displayed
-or written to disk.
+The model has three outputs: FSPL, SINR, and ``log10(capacity)``.  FSPL and
+SINR are predicted rather than supplied as inputs, which avoids target
+leakage and makes it possible to calculate an error for each output.  The
+capacity target is logarithmic because rates range from thousands to tens of
+millions of bits per second.  Predictions are converted back to ordinary
+capacity values before they are displayed or written to disk.
 """
 
 from __future__ import annotations
@@ -34,17 +35,20 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
 
-# These names and this order define the public input format of the model.  The
-# same order must be used by the --predict command when predicting one row.
+# These names and this order define the public input format of the model. FSPL
+# and SINR are deliberately absent: they are prediction targets now. The same
+# order must be used by --predict when predicting one row.
 FEATURE_NAMES = (
     "t_count",
     "r_count",
     "tx_idx",
     "rx_idx",
     "distance",
-    "fspl",
-    "sinr_db",
 )
+
+# The MLP produces these three values for every input row. The final target is
+# stored internally as log10(capacity), then converted back to bps for output.
+TARGET_NAMES = ("fspl_db", "sinr_db", "capacity_bps")
 
 # A result row in results.txt looks like:
 # T=1, R=16 | distance=62.5073 m | fspl=75.9646 dB |
@@ -63,7 +67,7 @@ TRIAL_PATTERN = re.compile(
 
 
 def load_results(path: Path) -> tuple[np.ndarray, np.ndarray]:
-    """Parse simulator text into a feature matrix and a target vector.
+    """Parse simulator text into input features and three target values.
 
     ``results.txt`` stores the transmitter and receiver counts on a separate
     ``Trial`` line, followed by several pair-result lines.  The current role
@@ -74,9 +78,9 @@ def load_results(path: Path) -> tuple[np.ndarray, np.ndarray]:
         path: Text file produced by ``metrics.save_all_results``.
 
     Returns:
-        A tuple ``(features, capacities)``. ``features`` has one row per
-        network link and columns in ``FEATURE_NAMES`` order. ``capacities``
-        contains the corresponding data rates in bits per second.
+        A tuple ``(features, targets)``. ``features`` has one row per network
+        link and columns in ``FEATURE_NAMES`` order. ``targets`` has columns
+        for FSPL in dB, SINR in dB, and capacity in bps.
 
     Raises:
         ValueError: If a result row appears before its trial role counts, or
@@ -102,8 +106,8 @@ def load_results(path: Path) -> tuple[np.ndarray, np.ndarray]:
         if t_count is None or r_count is None:
             raise ValueError(f"Missing trial role counts before line {line_number}")
 
-        # Convert the captured strings to numbers immediately.  This gives
-        # scikit-learn a numeric matrix instead of a list of text values.
+        # Convert only model inputs to the feature matrix. FSPL and SINR are
+        # kept for the target matrix below, not fed into the model as inputs.
         features.append(
             [
                 t_count,
@@ -111,18 +115,21 @@ def load_results(path: Path) -> tuple[np.ndarray, np.ndarray]:
                 int(result_match.group("tx")),
                 int(result_match.group("rx")),
                 float(result_match.group("distance")),
-                float(result_match.group("fspl")),
-                float(result_match.group("sinr")),
             ]
         )
-        # Capacity is the supervised-learning target: the value the MLP must
-        # learn to estimate from the features above.
-        targets.append(float(result_match.group("capacity")))
+        # These are the three supervised-learning targets the MLP must learn.
+        targets.append(
+            [
+                float(result_match.group("fspl")),
+                float(result_match.group("sinr")),
+                float(result_match.group("capacity")),
+            ]
+        )
 
     if not features:
         raise ValueError(f"No result rows found in {path}")
-    # float64 is used for all columns because the distance, FSPL, SINR, and
-    # capacity values contain decimals and can span a wide numerical range.
+    # float64 preserves the decimal values and is the standard numeric type
+    # expected by scikit-learn estimators.
     return np.asarray(features, dtype=np.float64), np.asarray(targets, dtype=np.float64)
 
 
@@ -145,13 +152,15 @@ def resolve_data_path(requested: Path) -> Path:
 
 
 def build_model() -> Pipeline:
-    """Build the preprocessing and MLP regression pipeline.
+    """Build the preprocessing and multi-output MLP regression pipeline.
 
     StandardScaler puts every input feature on a comparable scale.  Without
     scaling, values such as node indexes and distances would have a very
     different influence from SINR and FSPL values.  The MLP then uses two
     fully connected hidden layers with ReLU activation to learn nonlinear
-    relationships between the network measurements and data rate.
+    relationships between the network measurements and the three targets.
+    MLPRegressor accepts a two-dimensional target matrix, so its output layer
+    contains one output for FSPL, one for SINR, and one for log-capacity.
     """
     return Pipeline(
         [
@@ -233,75 +242,108 @@ def plot_results(actual: np.ndarray, predicted: np.ndarray, plot_path: Path) -> 
 
 
 def train(data_path: Path, model_path: Path, predictions_path: Path, plot_path: Path) -> None:
-    """Train, evaluate, save, and plot the data-rate predictor.
+    """Train, evaluate, save, and plot the multi-output predictor."""
+    features, raw_targets = load_results(data_path)
+    # Capacity spans several orders of magnitude, so train on log10(capacity).
+    # FSPL and SINR remain in dB and are learned as ordinary regression values.
+    targets = raw_targets.copy()
+    targets[:, 2] = np.log10(targets[:, 2])
 
-    The data is split into 80% training rows and 20% held-out test rows.  The
-    test rows are never used to fit the model; they provide an estimate of how
-    well the trained MLP predicts unseen examples from the same data source.
-    """
-    features, capacities = load_results(data_path)
-    # Log targets make the wide range of rates easier for the MLP to learn.
-    log_capacities = np.log10(capacities)
-    # random_state makes the train/test membership repeatable.  test_size=0.2
-    # reserves one fifth of the rows for the final evaluation.
+    # Keep one fifth of the rows completely unseen during training.
     x_train, x_test, y_train, y_test = train_test_split(
-        features, log_capacities, test_size=0.2, random_state=42
+        features, targets, test_size=0.2, random_state=42
     )
 
+    # Put all three output columns on comparable scales, fitting only on the
+    # training targets to avoid leaking test-set information.
+    target_scaler = StandardScaler()
+    y_train_scaled = target_scaler.fit_transform(y_train)
     model = build_model()
-    # Pipeline.fit first learns feature scaling from x_train, then trains the
-    # MLP on the scaled features and log-capacity targets.
-    model.fit(x_train, y_train)
-    # The network predicts log10(capacity), so 10** reverses that transform.
-    predicted = np.power(10.0, model.predict(x_test))
-    actual = np.power(10.0, y_test)
+    model.fit(x_train, y_train_scaled)
 
-    # Store the complete pipeline, not just the neural network.  Loading this
-    # object later automatically applies the same StandardScaler parameters.
+    # Reverse target scaling and then reverse the log transform for capacity.
+    predicted_targets = target_scaler.inverse_transform(model.predict(x_test))
+    actual_targets = y_test.copy()
+    predicted_targets[:, 2] = np.power(10.0, predicted_targets[:, 2])
+    actual_targets[:, 2] = np.power(10.0, actual_targets[:, 2])
+    predicted_fspl, predicted_sinr, predicted_capacity = predicted_targets.T
+    actual_fspl, actual_sinr, actual_capacity = actual_targets.T
+
     model_path.parent.mkdir(parents=True, exist_ok=True)
-    joblib.dump({"model": model, "feature_names": FEATURE_NAMES}, model_path)
-
-    # Keep the link identity beside each prediction.  x_test contains the
-    # original, unscaled feature values, so columns 2 and 3 identify the exact
-    # transmitter and receiver pair used for that test prediction.
-    prediction_rows = np.column_stack(
-        (x_test[:, 2], x_test[:, 3], actual, predicted, predicted - actual)
+    joblib.dump(
+        {
+            "model": model,
+            "target_scaler": target_scaler,
+            "feature_names": FEATURE_NAMES,
+            "target_names": TARGET_NAMES,
+        },
+        model_path,
     )
-    np.savetxt(
-        predictions_path,
-        prediction_rows,
-        delimiter=",",
-        header=(
-            "transmitter_idx,receiver_idx,actual_capacity_bps,"
-            "predicted_capacity_bps,error_bps"
-        ),
-        comments="",
-    )
-    # Produce a reusable image rather than requiring an interactive display.
-    plot_results(actual, predicted, plot_path)
 
-    # MAE is the average absolute mistake, RMSE emphasizes large mistakes, and
-    # R^2 measures how much variation is explained relative to a mean baseline.
-    rmse = np.sqrt(mean_squared_error(actual, predicted))
+    connection_labels = np.array(
+        [f"T{int(tx)} -> R{int(rx)}" for tx, rx in x_test[:, 2:4]]
+    )
+    with predictions_path.open("w", encoding="utf-8", newline="") as predictions_file:
+        predictions_file.write(
+            "connection,distance_m,actual_fspl_db,predicted_fspl_db,"
+            "fspl_error_db,actual_sinr_db,predicted_sinr_db,sinr_error_db,"
+            "actual_capacity_bps,predicted_capacity_bps,capacity_error_bps\n"
+        )
+        for connection, row, actual_fspl_value, predicted_fspl_value, actual_sinr_value, predicted_sinr_value, actual_rate, predicted_rate in zip(
+            connection_labels,
+            x_test,
+            actual_fspl,
+            predicted_fspl,
+            actual_sinr,
+            predicted_sinr,
+            actual_capacity,
+            predicted_capacity,
+        ):
+            predictions_file.write(
+                f"{connection},{row[4]:.6f},{actual_fspl_value:.6f},"
+                f"{predicted_fspl_value:.6f},{predicted_fspl_value - actual_fspl_value:.6f},"
+                f"{actual_sinr_value:.6f},{predicted_sinr_value:.6f},"
+                f"{predicted_sinr_value - actual_sinr_value:.6f},"
+                f"{actual_rate:.6f},{predicted_rate:.6f},"
+                f"{predicted_rate - actual_rate:.6f}\n"
+            )
+
+    plot_results(actual_capacity, predicted_capacity, plot_path)
+
+    # Report separate metrics because the outputs use different units.
+    capacity_rmse = np.sqrt(mean_squared_error(actual_capacity, predicted_capacity))
     print(f"Rows used: {len(features)} (train={len(x_train)}, test={len(x_test)})")
-    print(f"MAE:  {mean_absolute_error(actual, predicted):,.2f} bps")
-    print(f"RMSE: {rmse:,.2f} bps")
-    print(f"R^2:  {r2_score(actual, predicted):.4f}")
+    print(
+        f"FSPL  MAE: {mean_absolute_error(actual_fspl, predicted_fspl):.4f} dB | "
+        f"R^2: {r2_score(actual_fspl, predicted_fspl):.4f}"
+    )
+    print(
+        f"SINR  MAE: {mean_absolute_error(actual_sinr, predicted_sinr):.4f} dB | "
+        f"R^2: {r2_score(actual_sinr, predicted_sinr):.4f}"
+    )
+    print(f"Capacity MAE: {mean_absolute_error(actual_capacity, predicted_capacity):,.2f} bps")
+    print(f"Capacity RMSE: {capacity_rmse:,.2f} bps")
+    print(f"Capacity R^2: {r2_score(actual_capacity, predicted_capacity):.4f}")
     print(f"Saved model: {model_path}")
     print(f"Saved test predictions: {predictions_path}")
     print(f"Saved plot: {plot_path}")
 
 
 def predict(model_path: Path, values: list[float]) -> None:
-    """Load a saved model and predict one data rate from seven feature values."""
+    """Load a saved model and predict FSPL, SINR, and capacity for one link."""
     bundle = joblib.load(model_path)
     model = bundle["model"]
+    target_scaler = bundle["target_scaler"]
     if len(values) != len(FEATURE_NAMES):
         names = ", ".join(FEATURE_NAMES)
         raise ValueError(f"Expected {len(FEATURE_NAMES)} values in this order: {names}")
-    # The saved pipeline performs scaling, and its MLP returns log10(capacity).
-    # Convert that one prediction back to the user-facing bps unit.
-    rate_bps = float(np.power(10.0, model.predict([values])[0]))
+    # The saved pipeline scales inputs. Undo target scaling, then convert the
+    # third output from log10(capacity) to bits per second.
+    prediction = target_scaler.inverse_transform(model.predict([values]))[0]
+    fspl_db, sinr_db, log_capacity = prediction
+    rate_bps = float(np.power(10.0, log_capacity))
+    print(f"Predicted FSPL: {fspl_db:.4f} dB")
+    print(f"Predicted SINR: {sinr_db:.4f} dB")
     print(f"Predicted data rate: {rate_bps:,.2f} bps ({rate_bps / 1e6:,.4f} Mbps)")
 
 
@@ -318,10 +360,10 @@ def main() -> None:
         "--predict",
         nargs=len(FEATURE_NAMES),
         type=float,
-        metavar=("T", "R", "TX", "RX", "DIST", "FSPL", "SINR"),
-        # Seven values are required because they correspond one-to-one with
+        metavar=("T", "R", "TX", "RX", "DIST"),
+        # Five values are required because they correspond one-to-one with
         # FEATURE_NAMES and are passed to the saved model in that exact order.
-        help="Predict one rate using t_count r_count tx_idx rx_idx distance fspl sinr_db",
+        help="Predict FSPL, SINR, and rate using t_count r_count tx_idx rx_idx distance",
     )
     args = parser.parse_args()
 
