@@ -18,6 +18,7 @@ capacity values before they are displayed or written to disk.
 from __future__ import annotations
 
 import argparse
+import csv
 import re
 from pathlib import Path
 
@@ -241,7 +242,43 @@ def plot_results(actual: np.ndarray, predicted: np.ndarray, plot_path: Path) -> 
     plt.close(figure)
 
 
-def train(data_path: Path, model_path: Path, predictions_path: Path, plot_path: Path) -> None:
+def compute_regression_metrics(actual: np.ndarray, predicted: np.ndarray) -> dict[str, float]:
+    """Return a compact set of standard regression metrics for a target."""
+    absolute_errors = np.abs(predicted - actual)
+    metrics = {
+        "mae": float(mean_absolute_error(actual, predicted)),
+        "rmse": float(np.sqrt(mean_squared_error(actual, predicted))),
+        "r2": float(r2_score(actual, predicted)),
+        "median_abs_error": float(np.median(absolute_errors)),
+    }
+    if np.all(actual > 0):
+        relative = np.abs((actual - predicted) / actual)
+        metrics["mape_pct"] = float(np.mean(relative) * 100.0)
+    else:
+        metrics["mape_pct"] = float("nan")
+    return metrics
+
+
+def save_summary_csv(summary_path: Path, metrics_by_target: dict[str, dict[str, float]]) -> None:
+    """Write a compact CSV summary of the overall regression metrics."""
+    summary_path.parent.mkdir(parents=True, exist_ok=True)
+    with summary_path.open("w", encoding="utf-8", newline="") as summary_file:
+        writer = csv.writer(summary_file)
+        writer.writerow(["target", "mae", "rmse", "r2", "median_abs_error", "mape_pct"])
+        for target, metrics in metrics_by_target.items():
+            writer.writerow(
+                [
+                    target,
+                    metrics["mae"],
+                    metrics["rmse"],
+                    metrics["r2"],
+                    metrics["median_abs_error"],
+                    metrics["mape_pct"],
+                ]
+            )
+
+
+def train(data_path: Path, model_path: Path, predictions_path: Path, plot_path: Path, summary_path: Path) -> None:
     """Train, evaluate, save, and plot the multi-output predictor."""
     features, raw_targets = load_results(data_path)
     # Capacity spans several orders of magnitude, so train on log10(capacity).
@@ -283,7 +320,24 @@ def train(data_path: Path, model_path: Path, predictions_path: Path, plot_path: 
     connection_labels = np.array(
         [f"T{int(tx)} -> R{int(rx)}" for tx, rx in x_test[:, 2:4]]
     )
+
+    # Report separate metrics because the outputs use different units.
+    metrics_by_target = {
+        "FSPL": compute_regression_metrics(actual_fspl, predicted_fspl),
+        "SINR": compute_regression_metrics(actual_sinr, predicted_sinr),
+        "Capacity": compute_regression_metrics(actual_capacity, predicted_capacity),
+    }
+
     with predictions_path.open("w", encoding="utf-8", newline="") as predictions_file:
+        predictions_file.write("target,mae,rmse,r2,median_abs_error,mape_pct\n")
+        for target_name, metrics in metrics_by_target.items():
+            mape_value = metrics["mape_pct"]
+            mape_text = "" if np.isnan(mape_value) else f"{mape_value:.2f}"
+            predictions_file.write(
+                f"{target_name},{metrics['mae']:.6f},{metrics['rmse']:.6f},{metrics['r2']:.6f},"
+                f"{metrics['median_abs_error']:.6f},{mape_text}\n"
+            )
+        predictions_file.write("\n")
         predictions_file.write(
             "connection,distance_m,actual_fspl_db,predicted_fspl_db,"
             "fspl_error_db,actual_sinr_db,predicted_sinr_db,sinr_error_db,"
@@ -310,22 +364,23 @@ def train(data_path: Path, model_path: Path, predictions_path: Path, plot_path: 
 
     plot_results(actual_capacity, predicted_capacity, plot_path)
 
-    # Report separate metrics because the outputs use different units.
-    capacity_rmse = np.sqrt(mean_squared_error(actual_capacity, predicted_capacity))
+    save_summary_csv(summary_path, metrics_by_target)
+
     print(f"Rows used: {len(features)} (train={len(x_train)}, test={len(x_test)})")
-    print(
-        f"FSPL  MAE: {mean_absolute_error(actual_fspl, predicted_fspl):.4f} dB | "
-        f"R^2: {r2_score(actual_fspl, predicted_fspl):.4f}"
-    )
-    print(
-        f"SINR  MAE: {mean_absolute_error(actual_sinr, predicted_sinr):.4f} dB | "
-        f"R^2: {r2_score(actual_sinr, predicted_sinr):.4f}"
-    )
-    print(f"Capacity MAE: {mean_absolute_error(actual_capacity, predicted_capacity):,.2f} bps")
-    print(f"Capacity RMSE: {capacity_rmse:,.2f} bps")
-    print(f"Capacity R^2: {r2_score(actual_capacity, predicted_capacity):.4f}")
+    print("\nPrediction summary (test set)")
+    print(f"{'Target':<8} {'MAE':>16} {'RMSE':>16} {'R^2':>10} {'MedianAE':>14} {'MAPE%':>10}")
+    for target_name, metrics in metrics_by_target.items():
+        mape_value = metrics["mape_pct"]
+        mape_text = "n/a" if np.isnan(mape_value) else f"{mape_value:.2f}"
+        print(
+            f"{target_name:<8} "
+            f"{metrics['mae']:>16.4f} {metrics['rmse']:>16.4f} "
+            f"{metrics['r2']:>10.4f} {metrics['median_abs_error']:>14.4f} "
+            f"{mape_text:>10}"
+        )
     print(f"Saved model: {model_path}")
     print(f"Saved test predictions: {predictions_path}")
+    print(f"Saved summary metrics: {summary_path}")
     print(f"Saved plot: {plot_path}")
 
 
@@ -355,6 +410,7 @@ def main() -> None:
     parser.add_argument("--data", type=Path, default=Path("relut.txt"))
     parser.add_argument("--model", type=Path, default=Path("mlp_data_rate.joblib"))
     parser.add_argument("--predictions", type=Path, default=Path("mlp_predictions.csv"))
+    parser.add_argument("--summary", type=Path, default=Path("mlp_summary.csv"))
     parser.add_argument("--plot", type=Path, default=Path("mlp_results.png"))
     parser.add_argument(
         "--predict",
@@ -375,7 +431,7 @@ def main() -> None:
     # Normal execution trains a new model, evaluates it, and writes all three
     # outputs: the serialized model, CSV predictions, and PNG plot.
     data_path = resolve_data_path(args.data)
-    train(data_path, args.model, args.predictions, args.plot)
+    train(data_path, args.model, args.predictions, args.plot, args.summary)
 
 
 if __name__ == "__main__":
