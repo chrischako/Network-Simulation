@@ -11,7 +11,7 @@ def pos(seed=42):
     ar = 1000  # area of 1000m x 1000m
 
     # setting nodes
-    nd = 20  # number of nodes
+    nd = 200  # number of nodes
 
     # positions stay deterministic for a given seed
     position_rng = np.random.default_rng(seed)
