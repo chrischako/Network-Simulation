@@ -46,4 +46,5 @@ if __name__ == "__main__":
     plt.title('Node Positions and Traffic Roles')
     plt.legend()
     plt.grid(True)
+    plt.savefig('network_plot.png', dpi=150, bbox_inches='tight')
     plt.show()

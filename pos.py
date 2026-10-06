@@ -8,7 +8,7 @@ from metrics import fspl_db, calculate_metrics
 # setting positions of nodes randomly in the area
 def pos(seed=42):
     # setting area
-    ar = 100  # area of 100m x 100m
+    ar = 1000  # area of 1000m x 1000m
 
     # setting nodes
     nd = 20  # number of nodes
